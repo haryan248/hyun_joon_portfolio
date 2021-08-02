@@ -1,0 +1,45 @@
+.section_banner {
+    position: relative;
+}
+.section_banner:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #00000035 0, #00000035 90%);
+    background-image: url("../../assets/images/f017d4983c393da163ee172fb40a0d33.webp");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top center;
+    z-index: -1;
+}
+.banner_content {
+    width: 100%;
+    max-width: 71.25rem;
+    margin: 0 auto;
+    padding: calc(4rem + 4.5rem) 2rem 4rem;
+    text-align: center;
+}
+.section_banner .banner_title {
+    font-family: AppleSDGothicNeoEB00;
+    font-weight: 400;
+    font-size: 4rem;
+    color: #ffff;
+    word-break: keep-all;
+}
+.banner_more-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 3px solid #ffffff;
+    border-radius: 10rem;
+    font-weight: 400;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #ffffff;
+    line-height: 1.5;
+    cursor: pointer;
+}

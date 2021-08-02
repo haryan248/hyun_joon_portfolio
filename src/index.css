@@ -1,0 +1,37 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    src: url("./assets/fonts/AppleSDGothicNeoB.ttf");
+    font-family: "AppleSDGothicNeoB00";
+}
+@font-face {
+    src: url("./assets/fonts/AppleSDGothicNeoEB.ttf");
+    font-family: "AppleSDGothicNeoEB00";
+}
+
+@font-face {
+    src: url("./assets/fonts/AppleSDGothicNeoH.ttf");
+    font-family: "AppleSDGothicNeoH00";
+}
+
+@font-face {
+    src: url("./assets/fonts/AppleSDGothicNeoM.ttf");
+    font-family: "AppleSDGothicNeoM00";
+}
+
+@font-face {
+    src: url("./assets/fonts/AppleSDGothicNeoR.ttf");
+    font-family: "AppleSDGothicNeoR00";
+}
+@font-face {
+    src: url("./assets/fonts/AppleSDGothicNeoSB.ttf");
+    font-family: "AppleSDGothicNeoSB00";
+}
