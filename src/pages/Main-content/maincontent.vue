@@ -1,14 +1,13 @@
 <template>
     <div>
         <Banner />
-        <!-- 내소개 -->
+        <!-- about me -->
         <About />
-        <!-- 스킬 -->
-        <div></div>
-        <!-- 프로젝트 -->
+        <!-- skill -->
+        <Skill />
+        <!-- projects -->
         <Projects />
-
-        <!-- 커리어 -->
+        <!-- career -->
         <Career />
     </div>
 </template>
@@ -16,12 +15,13 @@
 <script>
 import Banner from "../../components/Banner/banner.vue";
 import About from "../../components/About/about.vue";
+import Skill from "../../components/Skill/skill.vue";
 import Projects from "../../components/Project/project.vue";
 import Career from "../../components/Career/career.vue";
 
 export default {
     name: "Maincontent",
-    components: { Projects, About, Career, Banner },
+    components: { Projects, About, Career, Banner, Skill },
     data() {
         return {
             projects: [
