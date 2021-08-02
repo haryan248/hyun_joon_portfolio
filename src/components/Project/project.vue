@@ -8,7 +8,7 @@
                 <div class="project_container">
                     <div class="project_img"></div>
                     <div class="project_intro">
-                        <div class="project_intro_title"><span class="highlight">01</span>BlockChain 학생증</div>
+                        <div class="project_intro_title"><span class="highlight">01</span> BlockChain 학생증</div>
                         <div class="project_intro_text">
                             <div class="project_intro-description">
                                 <p>
@@ -63,7 +63,7 @@
                 </div>
                 <div class="project_container">
                     <div class="project_intro">
-                        <div class="project_intro_title"><span class="highlight">01</span>포르쉐 웹 쇼핑몰</div>
+                        <div class="project_intro_title"><span class="highlight">02</span> 포르쉐 웹 쇼핑몰</div>
                         <div class="project_intro_text">
                             <div class="project_intro-description">
                                 <p>

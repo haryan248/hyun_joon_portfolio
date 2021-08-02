@@ -1,11 +1,14 @@
 .section_career {
+    background: linear-gradient(#a2cfff, #dbebff);
+}
+.career_content {
     box-sizing: border-box;
     width: 100%;
     max-width: 71.25rem;
     padding: 4rem 2rem;
     margin: 0 auto;
 }
-.section_title_wrap {
+.career_section_title_wrap {
     box-sizing: initial;
     display: flex;
     justify-content: center;
@@ -21,11 +24,11 @@
     font-size: 3rem;
     line-height: 1.5;
 }
-.Career_companies {
+.career_companies {
     width: 90%;
     margin: 0 auto;
 }
-.Career_companies .Career_company {
+.career_companies .career_company {
     display: -webkit-flex;
     display: -moz-box;
     display: flex;
@@ -33,40 +36,40 @@
     flex-flow: row nowrap;
     justify-content: center;
 }
-.Career_companies .Career_company .Career_logo-container {
+.career_companies .career_company .career_logo-container {
     padding-right: 3rem;
     border-right: 1px solid #ccc;
 }
-.Career_companies .Career_company .Career_info {
+.career_companies .career_company .career_info {
     padding-left: 3rem;
+    font-family: AppleSDGothicNeoR00;
 }
-.Career_companies .Career_company .Career_info .Career_title {
+.career_companies .career_company .career_info .career_title {
     padding-bottom: 0.5rem;
     font-weight: 900;
     font-size: 1.5rem;
 }
-.Career_companies .Career_company .Career_info .Career_period {
+.career_companies .career_company .career_info .career_period {
     padding-bottom: 1rem;
     font-weight: 400;
     font-size: 1.1rem;
     color: #6c757d;
 }
-.Career_companies .Career_company .Career_info .Career_description {
+.career_companies .career_company .career_info .career_description {
     padding-bottom: 1rem;
     border-bottom: 1px solid #ccc;
 }
-.Career_companies .Career_company .Career_info .Career_works {
+.career_companies .career_company .career_info .career_works {
     padding-left: 1rem;
     margin: 1rem 0;
 }
-.Career_companies .Career_company .Career_info .Career_works .Career_works-title {
+.career_companies .career_company .career_info .career_works .career_works-title {
     margin: 2rem 0 1rem -1rem;
     font-size: 1rem;
     color: #222;
 }
-.Career_companies .Career_company .Career_info .Career_works .Career_works-period {
+.career_companies .career_company .career_info .career_works .career_works-period {
     margin: 0 0 1rem -1rem;
     font-size: 0.9rem;
-    font-weight: 400;
     color: #6c757d;
 }
