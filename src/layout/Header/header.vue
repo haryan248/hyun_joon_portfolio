@@ -1,6 +1,6 @@
 <template>
     <div>
-        <header class="Header_Header" :class="{ Header_background: showHeader }">
+        <header class="Header_Header" :class="{ Header_background: checkHeight }">
             <div class="Header_content">
                 <div class="Header_title">Hyun Joon's Portfolio</div>
                 <div class="Header_navigation-menus">
@@ -15,6 +15,9 @@
 <script>
 export default {
     name: "Header",
+    props: {
+        scrollHeight: Number,
+    },
     data() {
         return {
             HeaderNavMenus: [
@@ -30,22 +33,31 @@ export default {
             careerLocation: 0,
         };
     },
-    computed: {},
-    mounted() {
-        window.addEventListener("scroll", this.handleScroll);
-        this.aboutLocation = document.querySelector(".section_myinfo").offsetTop;
-        this.skillLocation = document.querySelector(".section_myinfo").offsetTop - 72;
-        this.projectLocation = document.querySelector(".section_project").offsetTop - 72;
-        this.careerLocation = document.querySelector(".section_career").offsetTop - 72;
-    },
-    methods: {
-        handleScroll() {
-            if (window.scrollY + 72 >= document.getElementsByClassName("banner_content")[0].offsetHeight) {
-                this.showHeader = true;
+    computed: {
+        checkHeight() {
+            if (
+                this.scrollHeight &&
+                document.getElementsByClassName("section_myinfo")[0] &&
+                this.scrollHeight + document.getElementsByClassName("section_myinfo")[0].offsetHeight >= document.getElementsByClassName("Header_Header")[0].offsetTop
+            ) {
+                return true;
             } else {
-                this.showHeader = false;
+                return false;
             }
         },
+    },
+    mounted() {
+        this.setLocation();
+    },
+
+    methods: {
+        setLocation() {
+            this.aboutLocation = document.querySelector(".section_myinfo").offsetTop;
+            this.skillLocation = document.querySelector(".section_myinfo").offsetTop - 72;
+            this.projectLocation = document.querySelector(".section_project").offsetTop - 72;
+            this.careerLocation = document.querySelector(".section_career").offsetTop - 72;
+        },
+        handleScroll() {},
         moveTotab(id) {
             if (id === 1) {
                 window.scrollTo({ top: this.aboutLocation, behavior: "smooth" });

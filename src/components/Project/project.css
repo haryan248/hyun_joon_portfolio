@@ -1,4 +1,5 @@
 /* project css*/
+
 .section_project {
     background: linear-gradient(#1d3e61, #a2cfff);
 }
@@ -42,10 +43,12 @@
     background-repeat: no-repeat;
     transition: all 0.3s ease-in-out;
 }
+
 .project_intro {
     margin: 2%;
     width: 50%;
     color: #fff;
+    animation: textShow 1.5s;
 }
 .project_intro_title {
     padding: 0 5%;
