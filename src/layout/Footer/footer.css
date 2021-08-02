@@ -1,0 +1,26 @@
+.Footer_Footer {
+    height: 8rem;
+    padding-top: 3rem;
+    background-color: rgb(154, 192, 133);
+    text-align: center;
+}
+.Footer_Footer .Footer_icons {
+    margin-bottom: 1rem;
+}
+.Footer_Footer .Footer_icons .Footer_icon-wrapper.Footer_bg-white {
+    background-color: #fff;
+}
+
+.Footer_Footer .Footer_icons .Footer_icon-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    padding: 2px;
+    margin: 0 0.5rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+.Footer_Footer .Footer_icons .Footer_icon-wrapper .Footer_icon {
+    width: 100%;
+}
