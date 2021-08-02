@@ -19,7 +19,13 @@
     text-align: center;
 }
 .myinfo_section_title_wrap .section_title {
-    font-family: AppleSDGothicNeoB00;
+    color: #ffffff;
+    border-bottom-color: #cccccc;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    font-family: AppleSDGothicNeoEB00;
+    font-size: 3rem;
+    line-height: 1.5;
 }
 .myinfo_container {
     display: flex;
