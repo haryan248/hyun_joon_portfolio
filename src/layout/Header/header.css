@@ -1,0 +1,57 @@
+.Header_Header {
+    transition: all 0.3s ease-in-out;
+}
+
+.Header_Header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: transparent;
+    z-index: 10;
+}
+.Header_background {
+    box-shadow: 0 1px 0.3rem hsl(0deg 0% 80% / 80%);
+    background-color: #fff;
+    color: black;
+}
+.Header_content {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 71.25rem;
+    height: 4.5rem;
+    padding: 1.25rem 2rem;
+    margin: 0 auto;
+}
+.Header_navigation-menus {
+    float: right;
+}
+
+.Header_title {
+    display: inline-block;
+    font-family: AppleSDGothicNeoH00;
+    font-size: 1.5rem;
+    color: hsla(0, 0%, 100%, 0.7);
+    line-height: 2rem;
+    cursor: pointer;
+}
+.Header_background .Header_navigation-menu {
+    color: black;
+}
+.Header_navigation-menu {
+    display: inline-block;
+    padding: 0 1rem;
+    font-weight: 700;
+    font-size: 1rem;
+    color: hsla(0, 0%, 100%, 0.7);
+    line-height: 2rem;
+    cursor: pointer;
+}
+.Header_background .Header_title {
+    color: black;
+}
+
+.Header_navigation-menu,
+.Header_title {
+    color: #fff;
+}
