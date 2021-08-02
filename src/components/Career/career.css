@@ -28,7 +28,7 @@
     width: 90%;
     margin: 0 auto;
 }
-.career_companies .career_company {
+.career_company {
     display: -webkit-flex;
     display: -moz-box;
     display: flex;
@@ -36,39 +36,39 @@
     flex-flow: row nowrap;
     justify-content: center;
 }
-.career_companies .career_company .career_logo-container {
+.career_logo-container {
     padding-right: 3rem;
     border-right: 1px solid #ccc;
 }
-.career_companies .career_company .career_info {
+.career_info {
     padding-left: 3rem;
     font-family: AppleSDGothicNeoR00;
 }
-.career_companies .career_company .career_info .career_title {
+.career_title {
     padding-bottom: 0.5rem;
     font-weight: 900;
     font-size: 1.5rem;
 }
-.career_companies .career_company .career_info .career_period {
+.career_period {
     padding-bottom: 1rem;
     font-weight: 400;
     font-size: 1.1rem;
     color: #6c757d;
 }
-.career_companies .career_company .career_info .career_description {
+.career_description {
     padding-bottom: 1rem;
     border-bottom: 1px solid #ccc;
 }
-.career_companies .career_company .career_info .career_works {
+.career_works {
     padding-left: 1rem;
     margin: 1rem 0;
 }
-.career_companies .career_company .career_info .career_works .career_works-title {
+.career_works-title {
     margin: 2rem 0 1rem -1rem;
     font-size: 1rem;
     color: #222;
 }
-.career_companies .career_company .career_info .career_works .career_works-period {
+.career_works-period {
     margin: 0 0 1rem -1rem;
     font-size: 0.9rem;
     color: #6c757d;
