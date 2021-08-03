@@ -3,6 +3,9 @@
     color: #fff;
     font-family: AppleSDGothicNeoEB00;
 }
+.section_skill * {
+    box-sizing: border-box;
+}
 .skill_content {
     box-sizing: border-box;
     width: 100%;
@@ -40,34 +43,120 @@
 .status_bar-title {
     font-family: AppleSDGothicNeoEB00;
     margin-right: 20px;
+    width: 100px;
 }
 .status_bar-item {
-    height: 30px;
+    height: 20px;
     background-color: #f8f8f8;
     border-radius: 5px;
     flex: 1;
 }
 .status_bar-percent {
     display: block;
-    height: 30px;
-    line-height: 30px;
+    height: 20px;
+    line-height: 20px;
     background-color: #93acc873;
     text-align: right;
     border-radius: 5px;
-    width: 75%;
     padding-right: 20px;
     box-sizing: border-box;
     color: black;
-    animation: status-graph 2s 1;
 }
-
-@keyframes status-graph {
+.percent_animation-80 {
+    width: 80%;
+    animation: status-graph-80 1.5s 1;
+}
+.percent_animation-75 {
+    width: 75%;
+    animation: status-graph-75 1.5s 1;
+}
+.percent_animation-70 {
+    width: 70%;
+    animation: status-graph-70 1.5s 1;
+}
+.percent_animation-65 {
+    width: 65%;
+    animation: status-graph-65 1.5s 1;
+}
+.percent_animation-60 {
+    width: 60%;
+    animation: status-graph-60 1.5s 1;
+}
+.percent_animation-50 {
+    width: 50%;
+    animation: status-graph-50 1.5s 1;
+}
+.percent_animation-20 {
+    width: 20%;
+    animation: status-graph-20 1.5s 1;
+}
+@keyframes status-graph-80 {
+    0% {
+        width: 0;
+        color: rgb(255, 255, 255, 0);
+    }
+    100% {
+        width: 80%;
+        color: rgb(255, 255, 255, 1);
+    }
+}
+@keyframes status-graph-75 {
     0% {
         width: 0;
         color: rgb(255, 255, 255, 0);
     }
     100% {
         width: 75%;
+        color: rgb(255, 255, 255, 1);
+    }
+}
+@keyframes status-graph-70 {
+    0% {
+        width: 0;
+        color: rgb(255, 255, 255, 0);
+    }
+    100% {
+        width: 70%;
+        color: rgb(255, 255, 255, 1);
+    }
+}
+@keyframes status-graph-65 {
+    0% {
+        width: 0;
+        color: rgb(255, 255, 255, 0);
+    }
+    100% {
+        width: 65%;
+        color: rgb(255, 255, 255, 1);
+    }
+}
+@keyframes status-graph-60 {
+    0% {
+        width: 0;
+        color: rgb(255, 255, 255, 0);
+    }
+    100% {
+        width: 60%;
+        color: rgb(255, 255, 255, 1);
+    }
+}
+@keyframes status-graph-50 {
+    0% {
+        width: 0;
+        color: rgb(255, 255, 255, 0);
+    }
+    100% {
+        width: 50%;
+        color: rgb(255, 255, 255, 1);
+    }
+}
+@keyframes status-graph-20 {
+    0% {
+        width: 0;
+        color: rgb(255, 255, 255, 0);
+    }
+    100% {
+        width: 20%;
         color: rgb(255, 255, 255, 1);
     }
 }

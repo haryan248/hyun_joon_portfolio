@@ -4,6 +4,8 @@
     background: linear-gradient(#1d3e61, #a2cfff);
 }
 .project_content {
+    box-sizing: border-box;
+
     width: 100%;
     max-width: 71.25rem;
     display: flex;
@@ -26,4 +28,3 @@
     font-size: 3rem;
     line-height: 1.5;
 }
-

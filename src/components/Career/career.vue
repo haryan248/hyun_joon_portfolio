@@ -9,7 +9,7 @@
     </div>
 </template>
 <script>
-import CareerList from "./components/careerList.vue";
+import CareerList from "./components/careerList/careerList.vue";
 export default {
     name: "Career",
     components: { CareerList },

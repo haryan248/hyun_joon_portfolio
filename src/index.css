@@ -3,11 +3,7 @@ body {
     margin: 0;
     padding: 0;
 }
-body * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+
 @font-face {
     src: url("./assets/fonts/AppleSDGothicNeoB.ttf");
     font-family: "AppleSDGothicNeoB00";
