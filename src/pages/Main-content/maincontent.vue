@@ -4,9 +4,9 @@
         <!-- about me -->
         <About :scrollHeight="scrollHeight" />
         <!-- skill -->
-        <Skill />
+        <Skill :scrollHeight="scrollHeight" />
         <!-- projects -->
-        <Projects />
+        <Projects :scrollHeight="scrollHeight" />
         <!-- career -->
         <Career />
     </div>

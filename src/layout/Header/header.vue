@@ -53,7 +53,7 @@ export default {
     methods: {
         setLocation() {
             this.aboutLocation = document.querySelector(".section_myinfo").offsetTop;
-            this.skillLocation = document.querySelector(".section_myinfo").offsetTop - 72;
+            this.skillLocation = document.querySelector(".section_skill").offsetTop - 72;
             this.projectLocation = document.querySelector(".section_project").offsetTop - 72;
             this.careerLocation = document.querySelector(".section_career").offsetTop - 72;
         },
