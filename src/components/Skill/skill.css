@@ -1,4 +1,9 @@
 .section_skill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    width: 100%;
     background: linear-gradient(#58356f, #1d3e61);
     color: #fff;
     font-family: AppleSDGothicNeoEB00;

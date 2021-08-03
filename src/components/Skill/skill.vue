@@ -1,21 +1,19 @@
 <template>
-    <div>
-        <section class="section_skill">
-            <div class="skill_content" :class="[{ 'stagger-item': checkHeight }, { 'stagger-item-out': !checkHeight }]">
-                <div class="skill_section_title_wrap">
-                    <span class="section_title">SKILLS</span>
+    <section class="section_skill">
+        <div class="skill_content" :class="[{ 'stagger-item': checkHeight }, { 'stagger-item-out': !checkHeight }]">
+            <div class="skill_section_title_wrap">
+                <span class="section_title">SKILLS</span>
+            </div>
+        </div>
+        <div class="skill_container" :class="[{ 'stagger-item': checkHeight }, { 'stagger-item-out': !checkHeight }]" v-for="(skill, index) in skills" :key="index">
+            <div class="status_content" v-for="skill_item in skill" :key="skill_item.label">
+                <div class="status_bar-title">{{ skill_item.label }}</div>
+                <div class="status_bar-item">
+                    <div class="status_bar-percent" :class="getClass(skill_item.value)" :style="'animationDuration:' + durationList[skill_item.id] + 's'">{{ skill_item.value }}%</div>
                 </div>
             </div>
-            <div class="skill_container" :class="[{ 'stagger-item': checkHeight }, { 'stagger-item-out': !checkHeight }]" v-for="(skill, index) in skills" :key="index">
-                <div class="status_content" v-for="skill_item in skill" :key="skill_item.label">
-                    <div class="status_bar-title">{{ skill_item.label }}</div>
-                    <div class="status_bar-item">
-                        <div class="status_bar-percent" :class="getClass(skill_item.value)" :style="'animationDuration:' + durationList[skill_item.id] + 's'">{{ skill_item.value }}%</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
+        </div>
+    </section>
 </template>
 <script>
 export default {
@@ -65,7 +63,7 @@ export default {
 
     watch: {
         scrollHeight() {
-            if (this.scrollHeight >= document.getElementsByClassName("skill_container")[0].offsetTop - 400) {
+            if (this.scrollHeight >= document.getElementsByClassName("section_skill")[0].offsetTop - 400) {
                 this.checkHeight = true;
             } else {
                 this.checkHeight = false;
