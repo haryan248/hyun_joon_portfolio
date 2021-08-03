@@ -12,7 +12,7 @@
 }
 .career_logo-container {
     padding-right: 3rem;
-    border-right: 1px solid #ccc;
+    border-right: 1px solid #160e1c;
 }
 .career_info {
     padding-left: 3rem;
@@ -25,11 +25,10 @@
 .career_period {
     padding-bottom: 1rem;
     font-size: 1.1rem;
-    color: #6c757d;
 }
 .career_description {
     padding-bottom: 1rem;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #160e1c;
 }
 .career_works {
     padding-left: 1rem;
@@ -38,10 +37,8 @@
 .career_works-title {
     margin: 2rem 0 1rem -1rem;
     font-size: 1rem;
-    color: #222;
 }
 .career_works-period {
     margin: 0 0 1rem -1rem;
     font-size: 0.9rem;
-    color: #6c757d;
 }
