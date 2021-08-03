@@ -1,5 +1,6 @@
 .section_banner {
     position: relative;
+    background: linear-gradient(black, #160e1c);
 }
 .section_banner:before {
     content: "";
