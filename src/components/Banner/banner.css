@@ -22,8 +22,9 @@
     width: 100%;
     max-width: 71.25rem;
     margin: 0 auto;
-    padding: calc(4rem + 4.5rem) 2rem 4rem;
+    padding: 200px 100px 200px 100px;
     text-align: center;
+    box-sizing: border-box;
 }
 .section_banner .banner_title {
     font-family: AppleSDGothicNeoEB00;
@@ -33,14 +34,25 @@
     word-break: keep-all;
 }
 .banner_more-button {
-    display: inline-block;
+    display: block;
     padding: 1rem 2rem;
-    border: 3px solid #ffffff;
-    border-radius: 10rem;
-    font-weight: 400;
-    font-size: 1rem;
-    text-decoration: none;
-    color: #ffffff;
-    line-height: 1.5;
     cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    background-position: center;
+    background-size: 200%;
+    background: url("../../assets/images/banner/arrow-down.png") no-repeat;
+    animation: bounce-fade 1.2s infinite;
+}
+@keyframes bounce-fade {
+    0% {
+        margin-bottom: 10px;
+    }
+    50% {
+        margin-bottom: 20px;
+    }
+    100% {
+        margin-bottom: 10px;
+    }
 }
