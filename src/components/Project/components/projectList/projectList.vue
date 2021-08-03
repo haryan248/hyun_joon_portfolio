@@ -1,0 +1,65 @@
+<template>
+    <div :class="'project_wrapper_' + index">
+        <div class="project_container" :class="computedClass">
+            <div v-if="index % 2 === 0" class="project_img"></div>
+            <div class="project_intro">
+                <div class="project_intro_title">
+                    <span class="highlight">{{ project_index }}</span> {{ projects.title }}
+                </div>
+                <div class="project_intro_text">
+                    <div class="project_intro-description" v-html="projects.description"></div>
+                    <div class="project_description" v-for="(project_item, index) in projects" :key="index">
+                        <div class="projects_label">{{ project_item.label }}</div>
+                        <div class="projects_value">{{ project_item.value }}</div>
+                    </div>
+                    <div class="project_intro_button_box">
+                        <div class="project_intro_button" onclick="youtube_on('om3f3AuP0Tc')">
+                            YouTube 보기
+                        </div>
+                        <div class="project_intro_button" onclick="github_on('React-sns')">
+                            Github 보기
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div v-if="index % 2 !== 0" class="project_img"></div>
+        </div>
+    </div>
+</template>
+<script>
+export default {
+    name: "ProjectList",
+    props: {
+        projects: Object,
+        scrollHeight: Number,
+        index: Number,
+    },
+    data() {
+        return { checkHeight: false, project_index: 0, project_container: "" };
+    },
+    computed: {
+        computedClass() {
+            if (this.checkHeight) {
+                return "stagger-item";
+            } else {
+                return "stagger-item-out";
+            }
+        },
+    },
+    mounted() {
+        this.project_index = this.index + 1 < 10 ? "0" + (this.index + 1) : this.index + 1;
+    },
+    watch: {
+        scrollHeight() {
+            if (this.scrollHeight >= document.getElementsByClassName(`project_wrapper_${this.index}`)[0].offsetTop - 400) {
+                this.checkHeight = true;
+            } else {
+                this.checkHeight = false;
+            }
+        },
+    },
+};
+</script>
+<style scoped>
+@import url("./project-list.css");
+</style>
