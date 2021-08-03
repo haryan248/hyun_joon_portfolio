@@ -56,3 +56,14 @@ body * {
         transform: translateY(100px);
     }
 }
+.stagger-item {
+    animation: textShow 1s;
+    opacity: 1;
+}
+.stagger-item-out {
+    animation: textShowOut 1s;
+    opacity: 0;
+}
+.info_opacity_zero {
+    opacity: 0;
+}

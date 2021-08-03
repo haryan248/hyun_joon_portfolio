@@ -53,17 +53,7 @@
     font-size: 1.2em;
     font-family: AppleSDGothicNeoR00;
 }
-.stagger-item {
-    animation: textShow 1s;
-    opacity: 1;
-}
-.stagger-item-out {
-    animation: textShowOut 1s;
-    opacity: 0;
-}
-.info_opacity_zero {
-    opacity: 0;
-}
+
 .highlight {
     color: #fe4a49;
 }
