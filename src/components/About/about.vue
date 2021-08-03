@@ -1,7 +1,9 @@
 <template>
     <div class="section_myinfo">
-        <div class="myinfo_section_title_wrap" :class="[{ 'stagger-item': checkHeight }, { 'stagger-item-out': !checkHeight && !firstLoad }, { info_opacity_zero: firstLoad }]">
-            <span class="section_title">ABOUT ME</span>
+        <div class="myinfo_content" :class="[{ 'stagger-item': checkHeight }, { 'stagger-item-out': !checkHeight && !firstLoad }, { info_opacity_zero: firstLoad }]">
+            <div class="myinfo_section_title_wrap">
+                <span class="section_title">ABOUT ME</span>
+            </div>
         </div>
         <div class="myinfo_container">
             <div class="myinfo_introduce" :class="[{ 'stagger-item': checkHeight }, { 'stagger-item-out': !checkHeight && !firstLoad }, { info_opacity_zero: firstLoad }]">
