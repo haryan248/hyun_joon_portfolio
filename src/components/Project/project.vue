@@ -1,14 +1,12 @@
 <template>
-    <div>
-        <section class="section_project">
-            <div class="project_content">
-                <div class="project_section_title_wrap" :class="[{ 'stagger-item': checkHeight }, { 'stagger-item-out': !checkHeight }]">
-                    <span class="section_title">PROJECTS</span>
-                </div>
-                <ProjectList v-for="(projects, index) in projects" :key="index" :index="index" :projects="projects" :scrollHeight="scrollHeight" />
+    <section class="section_project">
+        <div class="project_content">
+            <div class="project_section_title_wrap" :class="[{ 'stagger-item': checkHeight }, { 'stagger-item-out': !checkHeight }]">
+                <span class="section_title">PROJECTS</span>
             </div>
-        </section>
-    </div>
+            <ProjectList v-for="(projects, index) in projects" :key="index" :index="index" :projects="projects" :scrollHeight="scrollHeight" />
+        </div>
+    </section>
 </template>
 <script>
 import ProjectList from "./components/projectList/projectList.vue";
