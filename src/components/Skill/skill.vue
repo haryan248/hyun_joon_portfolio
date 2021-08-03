@@ -6,33 +6,11 @@
                     <span class="section_title">SKILLS</span>
                 </div>
             </div>
-            <!-- front-end -->
-            <div class="skill_container">
-                <div class="status_content" v-for="skill in skills.frontEnd" :key="skill.label">
-                    <div class="status_bar-title">{{ skill.label }}</div>
+            <div class="skill_container" :class="[{ 'stagger-item': checkHeight }, { 'stagger-item-out': !checkHeight }]" v-for="(skill, index) in skills" :key="index">
+                <div class="status_content" v-for="skill_item in skill" :key="skill_item.label">
+                    <div class="status_bar-title">{{ skill_item.label }}</div>
                     <div class="status_bar-item">
-                        <div class="status_bar-percent" :class="'percent_animation-' + skill.value">{{ skill.value }}%</div>
-                    </div>
-                </div>
-                <!-- back-end -->
-                <div class="status_content" v-for="skill in skills.backEnd" :key="skill.label">
-                    <div class="status_bar-title">{{ skill.label }}</div>
-                    <div class="status_bar-item">
-                        <div class="status_bar-percent" :class="'percent_animation-' + skill.value">{{ skill.value }}%</div>
-                    </div>
-                </div>
-                <!-- configuration management -->
-                <div class="status_content" v-for="skill in skills.configurationManagement" :key="skill.label">
-                    <div class="status_bar-title">{{ skill.label }}</div>
-                    <div class="status_bar-item">
-                        <div class="status_bar-percent" :class="'percent_animation-' + skill.value">{{ skill.value }}%</div>
-                    </div>
-                </div>
-                <!-- communication -->
-                <div class="status_content" v-for="skill in skills.communication" :key="skill.label">
-                    <div class="status_bar-title">{{ skill.label }}</div>
-                    <div class="status_bar-item">
-                        <div class="status_bar-percent" :class="'percent_animation-' + skill.value">{{ skill.value }}%</div>
+                        <div class="status_bar-percent" :class="getClass(skill_item.value)" :style="'animationDuration:' + durationList[skill_item.id] + 's'">{{ skill_item.value }}%</div>
                     </div>
                 </div>
             </div>
@@ -46,30 +24,48 @@ export default {
     data() {
         return {
             checkHeight: false,
+            durationList: [],
             skills: {
                 frontEnd: [
-                    { label: "HTML5", value: "75" },
-                    { label: "CSS3", value: "70" },
-                    { label: "Javascript", value: "65" },
-                    { label: "Vue.js", value: "75" },
-                    { label: "React.js", value: "50" },
+                    { id: 0, label: "HTML5", value: "75" },
+                    { id: 1, label: "CSS3", value: "70" },
+                    { id: 2, label: "Javascript", value: "65" },
+                    { id: 3, label: "Vue.js", value: "75" },
+                    { id: 4, label: "React.js", value: "50" },
                 ],
                 backEnd: [
-                    { label: "Django", value: "50" },
-                    { label: "Spring", value: "20" },
+                    { id: 5, label: "Django", value: "50" },
+                    { id: 6, label: "Spring", value: "20" },
                 ],
-                configurationManagement: [{ label: "GitHub", value: "70" }],
+                configurationManagement: [{ id: 7, label: "GitHub", value: "70" }],
                 communication: [
-                    { label: "Slack", value: "80" },
-                    { label: "Figma", value: "80" },
-                    { label: "Jira", value: "70" },
+                    { id: 8, label: "Slack", value: "80" },
+                    { id: 9, label: "Figma", value: "80" },
+                    { id: 10, label: "Jira", value: "70" },
                 ],
             },
         };
     },
+    mounted() {
+        this.setAnimationStyle();
+    },
+    methods: {
+        getClass(value) {
+            if (this.checkHeight) return ["percent_animation-" + value, "percent_opacity_zero"];
+            else return "percent_animation-" + value + "-out";
+        },
+        setAnimationStyle() {
+            let duration = 0.7;
+            for (let i = 0; i < this.skills.frontEnd.length + this.skills.backEnd.length + this.skills.configurationManagement.length + this.skills.communication.length; i++) {
+                duration += 0.5;
+                this.durationList.push(duration);
+            }
+        },
+    },
+
     watch: {
         scrollHeight() {
-            if (this.scrollHeight >= document.getElementsByClassName("section_skill")[0].offsetTop - 400) {
+            if (this.scrollHeight >= document.getElementsByClassName("skill_container")[0].offsetTop - 400) {
                 this.checkHeight = true;
             } else {
                 this.checkHeight = false;
