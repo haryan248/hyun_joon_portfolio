@@ -1,0 +1,47 @@
+.career_companies {
+    width: 90%;
+    margin: 0 auto;
+}
+.career_company {
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    display: -ms-flexbox;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+.career_logo-container {
+    padding-right: 3rem;
+    border-right: 1px solid #ccc;
+}
+.career_info {
+    padding-left: 3rem;
+    font-family: AppleSDGothicNeoR00;
+}
+.career_title {
+    padding-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+.career_period {
+    padding-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #6c757d;
+}
+.career_description {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+.career_works {
+    padding-left: 1rem;
+    margin: 1rem 0;
+}
+.career_works-title {
+    margin: 2rem 0 1rem -1rem;
+    font-size: 1rem;
+    color: #222;
+}
+.career_works-period {
+    margin: 0 0 1rem -1rem;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
