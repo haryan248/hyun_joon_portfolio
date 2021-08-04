@@ -13,12 +13,8 @@
                         <div class="projects_value">{{ project_item.value }}</div>
                     </div>
                     <div class="project_intro_button_box">
-                        <div class="project_intro_button" onclick="youtube_on('om3f3AuP0Tc')">
-                            YouTube 보기
-                        </div>
-                        <div class="project_intro_button" onclick="github_on('React-sns')">
-                            Github 보기
-                        </div>
+                        <a v-if="projects.youtube" class="project_intro_button" :href="projects.youtube" target="_blank"><div>YouTube 보기</div></a>
+                        <a class="project_intro_button" :href="projects.github" target="_blank">Github 보기</a>
                     </div>
                 </div>
             </div>

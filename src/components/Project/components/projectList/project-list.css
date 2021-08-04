@@ -81,6 +81,8 @@
     cursor: pointer;
     border: 1.5px solid #fe4a49;
     transition: all 0.3s ease-in-out;
+    text-decoration: unset;
+    color: white;
 }
 .project_intro_button:hover {
     background-color: #fe4a49;
