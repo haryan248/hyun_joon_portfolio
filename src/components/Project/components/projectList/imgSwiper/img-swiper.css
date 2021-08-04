@@ -1,0 +1,68 @@
+.swiper_wrapper {
+    width: 100%;
+    margin-right: 1rem;
+}
+.swiper_content {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    cursor: pointer;
+}
+.swiper_background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    animation-duration: 0.4s;
+    transition: background-color 0.4s;
+    background-color: rgba(51, 51, 51, 0.2);
+}
+.swiper_img {
+    display: block;
+    width: 97%;
+    margin: 0 auto;
+}
+.card-text {
+    width: calc(100% - 40px);
+    display: block;
+    position: absolute;
+    z-index: 8;
+    top: 50%;
+    left: 50%;
+    font-family: AppleSDGothicNeoSB00;
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+card-text h5 {
+    height: 24px;
+    margin-bottom: 14px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+    width: 100%;
+    position: relative;
+    top: 0;
+    overflow: hidden;
+    word-wrap: normal;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.card-text-animation {
+    animation: slideTextShow 1s 1;
+}
+@keyframes slideTextShow {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-200%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-50%);
+    }
+}

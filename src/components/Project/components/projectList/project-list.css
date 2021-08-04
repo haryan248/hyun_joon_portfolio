@@ -4,11 +4,12 @@
     margin-bottom: 5%;
     width: 100%;
     border-radius: 10px;
+    color: #fff;
     /* background-color: #fff;
 	box-shadow: 1rem 1rem 1rem 0 rgb(68 68 68 / 20%); */
 }
 .project_img {
-    margin: 0 2%;
+    margin: 5% 2%;
     width: 50%;
     background-size: contain;
     background-position: center;
@@ -17,10 +18,7 @@
 }
 
 .project_intro {
-    margin: 2%;
-    width: 50%;
-    color: #fff;
-    animation: textShow 1.5s;
+    flex: 1;
 }
 .project_intro_title {
     padding: 0 5%;
@@ -32,7 +30,6 @@
 }
 .project_intro_text {
     padding: 6% 5%;
-    width: 100%;
     font-size: 1em;
     font-family: AppleSDGothicNeoR00;
 }
