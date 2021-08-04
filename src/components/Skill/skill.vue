@@ -6,6 +6,7 @@
             </div>
         </div>
         <div class="skill_container" :class="[{ 'stagger-item': checkHeight }, { 'stagger-item-out': !checkHeight }]" v-for="(skill, index) in skills" :key="index">
+            <div class="status_title">{{ index }}</div>
             <div class="status_content" v-for="skill_item in skill" :key="skill_item.label">
                 <div class="status_bar-title">{{ skill_item.label }}</div>
                 <div class="status_bar-item">
@@ -24,19 +25,19 @@ export default {
             checkHeight: false,
             durationList: [],
             skills: {
-                frontEnd: [
+                FrontEnd: [
                     { id: 0, label: "HTML5", value: "75" },
                     { id: 1, label: "CSS3", value: "70" },
                     { id: 2, label: "Javascript", value: "65" },
                     { id: 3, label: "Vue.js", value: "75" },
                     { id: 4, label: "React.js", value: "50" },
                 ],
-                backEnd: [
+                BackEnd: [
                     { id: 5, label: "Django", value: "50" },
                     { id: 6, label: "Spring", value: "20" },
                 ],
-                configurationManagement: [{ id: 7, label: "GitHub", value: "70" }],
-                communication: [
+                ConfigurationManagement: [{ id: 7, label: "GitHub", value: "70" }],
+                Communication: [
                     { id: 8, label: "Slack", value: "80" },
                     { id: 9, label: "Figma", value: "80" },
                     { id: 10, label: "Jira", value: "70" },
@@ -54,8 +55,8 @@ export default {
         },
         setAnimationStyle() {
             let duration = 0.7;
-            for (let i = 0; i < this.skills.frontEnd.length + this.skills.backEnd.length + this.skills.configurationManagement.length + this.skills.communication.length; i++) {
-                duration += 0.5;
+            for (let i = 0; i < this.skills.FrontEnd.length + this.skills.BackEnd.length + this.skills.ConfigurationManagement.length + this.skills.Communication.length; i++) {
+                duration += 0.3;
                 this.durationList.push(duration);
             }
         },

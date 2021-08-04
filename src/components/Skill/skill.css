@@ -38,7 +38,13 @@
     margin: 0 auto;
     justify-content: center;
     width: 100%;
-    padding: 40px;
+    padding: 20px 40px 20px 40px;
+}
+.status_title {
+    text-align: center;
+    font-family: AppleSDGothicNeoEB00;
+    font-size: 30px;
+    margin-bottom: 1rem;
 }
 .status_content {
     display: flex;
