@@ -1,9 +1,8 @@
 <template>
-    <Swiper :ref="'swiper-' + swiperIndex" :options="swiperOptions" @slideChangeTransitionStart="slideChangeTransitionStart('swiper-' + swiperIndex)" @slideChangeTransitionEnd="slideChangeTransitionEnd('swiper-' + swiperIndex)">
+    <Swiper ref="swiper" :options="swiperOptions" @slideChangeTransitionStart="slideChangeTransitionStart()" @slideChangeTransitionEnd="slideChangeTransitionEnd()">
         <SwiperSlide v-for="(image, index) in images" :key="index">
             <div class="swiper_wrapper">
                 <div class="swiper_content">
-                    <div class="swiper_background"></div>
                     <img class="swiper_img" :src="image.url" />
                 </div>
             </div>
@@ -25,7 +24,6 @@ export default {
     name: "ImgSwiper",
     props: {
         images: Array,
-        imgLength: Number,
         swiperIndex: Number,
     },
     components: {
@@ -56,24 +54,22 @@ export default {
     },
     computed: {
         swiper() {
-            let ref = "swiper-" + this.swiperIndex;
-            console.log(this.$refs[ref]);
-            return this.$refs[ref];
+            return this.$refs.swiper.$swiper;
         },
     },
     methods: {
-        slideChangeTransitionStart(ref) {
-            if (this.$refs[ref].activeIndex === this.imgLength + 1) {
+        slideChangeTransitionStart() {
+            if (this.swiper.activeIndex === this.images.length + 2) {
                 this.$set(this.animation, 0, true);
             } else {
-                this.$set(this.animation, this.swiper.activeIndex - 1, true);
+                this.$set(this.animation, this.swiper.activeIndex - 2, true);
             }
         },
-        slideChangeTransitionEnd(ref) {
-            if (this.$refs[ref].activeIndex === this.imgLength + 1) {
-                this.$set(this.animation, 0, false);
+        slideChangeTransitionEnd() {
+            if (this.swiper.activeIndex === this.images.length + 2) {
+                this.animation[0] = false;
             } else {
-                this.$set(this.animation, this.swiper.activeIndex - 1, false);
+                this.animation[this.swiper.activeIndex - 2] = false;
             }
         },
     },

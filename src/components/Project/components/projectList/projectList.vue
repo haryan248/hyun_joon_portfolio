@@ -2,7 +2,7 @@
     <div :class="'project_wrapper_' + index">
         <div class="project_container" :class="computedClass">
             <div v-if="index % 2 === 0" class="project_img">
-                <ImgSwiper :images="projects.images" :swiperIndex="index" :imgLength="projects.images.length" />
+                <ImgSwiper :images="projects.images" :swiperIndex="index" />
             </div>
             <div class="project_intro">
                 <div class="project_intro_title">
