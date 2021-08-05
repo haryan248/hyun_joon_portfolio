@@ -6,7 +6,6 @@
     align-items: center;
     flex-flow: column;
     width: 100%;
-    background: linear-gradient(#160e1c, #58356f);
     color: #fff;
 }
 .myinfo_content {
@@ -61,5 +60,5 @@
 }
 
 .highlight {
-    color: #fe4a49;
+    color: #78ace4;
 }
