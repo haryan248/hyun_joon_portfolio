@@ -9,8 +9,9 @@
 	box-shadow: 1rem 1rem 1rem 0 rgb(68 68 68 / 20%); */
 }
 .project_img {
-    margin: 5% 2%;
+    margin: 9% 2%;
     width: 50%;
+    height: 500px;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -19,12 +20,13 @@
 
 .project_intro {
     flex: 1;
+    color: #fff;
 }
 .project_intro_title {
     padding: 0 5%;
     width: 100%;
     font-size: 2em;
-    font-family: AppleSDGothicNeoSB00;
+    font-family: AppleSDGothicNeoEB00;
     text-align: left;
     letter-spacing: 0.05em;
 }
@@ -41,6 +43,7 @@
     padding-bottom: 1rem;
     margin-bottom: 1rem;
     border-bottom: 1px solid #ccc;
+    font-family: AppleSDGothicNeoR00;
     font-weight: 400;
     font-size: 1rem;
 }
@@ -70,17 +73,20 @@
     height: 50px;
 }
 .project_intro_button {
-    width: 48.5%;
+    width: 45.5%;
+    margin-right: 10px;
     line-height: 50px;
     text-align: center;
     font-size: 1.1em;
     font-family: "AppleSDGothicNeoR00";
     cursor: pointer;
-    border: 1.5px solid #fe4a49;
-    transition: all 0.3s ease-in-out;
+    border-radius: 4px;
+    border: 1.5px solid #78ace4;
+    transition: all 0.5s ease-in-out;
     text-decoration: unset;
     color: white;
 }
 .project_intro_button:hover {
-    background-color: #fe4a49;
+    /* background: linear-gradient(90deg, #78ace4, #6f41b6); */
+    background: #78ace4;
 }
