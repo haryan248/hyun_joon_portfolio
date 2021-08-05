@@ -3,7 +3,9 @@ body {
     margin: 0;
     padding: 0;
 }
-
+#app {
+    background: #181818;
+}
 @font-face {
     src: url("./assets/fonts/AppleSDGothicNeoB.ttf");
     font-family: "AppleSDGothicNeoB00";
