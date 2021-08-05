@@ -1,5 +1,5 @@
 <template>
-    <Swiper ref="swiper" :slides-per-view="1" :options="swiperOptions" @slideChangeTransitionStart="slideChangeTransitionStart" @slideChangeTransitionEnd="slideChangeTransitionEnd">
+    <Swiper :ref="'swiper-' + swiperIndex" :options="swiperOptions" @slideChangeTransitionStart="slideChangeTransitionStart('swiper-' + swiperIndex)" @slideChangeTransitionEnd="slideChangeTransitionEnd('swiper-' + swiperIndex)">
         <SwiperSlide v-for="(image, index) in images" :key="index">
             <div class="swiper_wrapper">
                 <div class="swiper_content">
@@ -26,6 +26,7 @@ export default {
     props: {
         images: Array,
         imgLength: Number,
+        swiperIndex: Number,
     },
     components: {
         Swiper,
@@ -40,7 +41,9 @@ export default {
                     delay: 3000,
                     disableOnInteraction: false,
                 },
-
+                slidesPerView: 1.5,
+                spaceBetween: 11,
+                centeredSlides: true,
                 pagination: {
                     el: ".swiper-pagination",
                 },
@@ -53,22 +56,24 @@ export default {
     },
     computed: {
         swiper() {
-            return this.$refs.swiper.$swiper;
+            let ref = "swiper-" + this.swiperIndex;
+            console.log(this.$refs[ref]);
+            return this.$refs[ref];
         },
     },
     methods: {
-        slideChangeTransitionStart() {
-            if (this.swiper.activeIndex === this.imgLength + 1) {
+        slideChangeTransitionStart(ref) {
+            if (this.$refs[ref].activeIndex === this.imgLength + 1) {
                 this.$set(this.animation, 0, true);
             } else {
                 this.$set(this.animation, this.swiper.activeIndex - 1, true);
             }
         },
-        slideChangeTransitionEnd() {
-            if (this.swiper.activeIndex === this.imgLength + 1) {
-                this.animation[0] = false;
+        slideChangeTransitionEnd(ref) {
+            if (this.$refs[ref].activeIndex === this.imgLength + 1) {
+                this.$set(this.animation, 0, false);
             } else {
-                this.animation[this.swiper.activeIndex - 1] = false;
+                this.$set(this.animation, this.swiper.activeIndex - 1, false);
             }
         },
     },
@@ -77,3 +82,4 @@ export default {
 <style scoped>
 @import url("./img-swiper.css");
 </style>
+<style></style>

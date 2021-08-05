@@ -17,12 +17,12 @@
     top: 0;
     animation-duration: 0.4s;
     transition: background-color 0.4s;
-    background-color: rgba(51, 51, 51, 0.2);
 }
 .swiper_img {
     display: block;
     width: 97%;
     margin: 0 auto;
+    opacity: 0.2;
 }
 .card-text {
     width: calc(100% - 40px);
@@ -31,11 +31,12 @@
     z-index: 8;
     top: 50%;
     left: 50%;
+    opacity: 0;
     font-family: AppleSDGothicNeoSB00;
     font-size: 40px;
     color: #fff;
     text-align: center;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(58%);
 }
 
 card-text h5 {
@@ -65,4 +66,28 @@ card-text h5 {
         opacity: 1;
         transform: translateX(-50%) translateY(-50%);
     }
+}
+
+.swiper-pagination-bullet {
+    background: #fff;
+    width: 12px;
+    height: 12px;
+}
+.swiper-pagination-bullet-active {
+    background: #6f41b6;
+}
+.swiper-slide-active .swiper_img {
+    height: 350px;
+    opacity: 1;
+}
+.swiper-slide-active .card-text {
+    opacity: 1;
+}
+.swiper-container {
+    height: 500px;
+}
+.swiper-button-prev,
+.swiper-button-next {
+    color: #8762bf;
+    top: 34%;
 }
