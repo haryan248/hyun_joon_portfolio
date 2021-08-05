@@ -1,6 +1,5 @@
 .section_banner {
     position: relative;
-    background: linear-gradient(black, #160e1c);
 }
 .section_banner:before {
     content: "";
@@ -19,12 +18,12 @@
     z-index: -1;
 }
 .banner_content {
+    box-sizing: border-box;
     width: 100%;
     max-width: 71.25rem;
     margin: 0 auto;
-    padding: 200px 100px 200px 100px;
+    padding: 9rem 1rem 4rem 1rem;
     text-align: center;
-    box-sizing: border-box;
 }
 .section_banner .banner_title {
     font-family: AppleSDGothicNeoEB00;
@@ -32,6 +31,7 @@
     font-size: 4rem;
     color: #ffff;
     word-break: keep-all;
+    margin-bottom: 8%;
 }
 .banner_more-button {
     display: block;
