@@ -2,7 +2,9 @@
     <div class="career_companies">
         <div class="career_company">
             <div class="career_logo-container">
-                <div class="career_logo-wrapper"></div>
+                <div class="career_logo-wrapper">
+                    <img class="career_logo" :src="careers.logo" />
+                </div>
             </div>
             <div class="career_info">
                 <div class="career_title">{{ careers.company }}</div>

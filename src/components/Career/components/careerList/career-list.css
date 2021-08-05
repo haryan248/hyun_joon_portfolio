@@ -12,7 +12,21 @@
 }
 .career_logo-container {
     padding-right: 3rem;
-    border-right: 1px solid #160e1c;
+    border-right: 1px solid #fff;
+}
+.career_logo-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 18rem;
+    height: 15rem;
+}
+.career_logo {
+    display: block;
+    flex-shrink: 0;
+    width: 100%;
 }
 .career_info {
     padding-left: 3rem;
@@ -28,7 +42,7 @@
 }
 .career_description {
     padding-bottom: 1rem;
-    border-bottom: 1px solid #160e1c;
+    border-bottom: 1px solid #fff;
 }
 .career_works {
     padding-left: 1rem;
