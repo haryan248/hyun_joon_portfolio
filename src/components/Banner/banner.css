@@ -1,5 +1,53 @@
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes bannerLeftShow {
+    from {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes bannerRightShow {
+    from {
+        opacity: 0;
+        transform: translateX(300px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes bounce-fade {
+    0% {
+        margin-bottom: 10px;
+    }
+    50% {
+        margin-bottom: 20px;
+    }
+    100% {
+        margin-bottom: 10px;
+    }
+}
+
 .section_banner {
     position: relative;
+    background: linear-gradient(65deg, #2a153d, #6f41b6, #4e95e2, #18d3a7);
+    background-size: 400% 400%;
+    animation: AnimationName 8s ease infinite;
+    overflow: hidden;
 }
 .section_banner:before {
     content: "";
@@ -22,9 +70,13 @@
     width: 100%;
     max-width: 71.25rem;
     margin: 0 auto;
-    padding: 9rem 1rem 4rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    height: 100vh;
 }
+
 .section_banner .banner_title {
     font-family: AppleSDGothicNeoEB00;
     font-weight: 400;
@@ -32,6 +84,16 @@
     color: #ffff;
     word-break: keep-all;
     margin-bottom: 8%;
+}
+.banner_animaiton-left {
+    animation: bannerLeftShow 1.5s;
+    opacity: 1;
+    color: transparent;
+    -webkit-text-stroke: 0.7px white;
+}
+.banner_animaiton-right {
+    animation: bannerRightShow 1.5s;
+    opacity: 1;
 }
 .banner_more-button {
     display: block;
@@ -45,14 +107,101 @@
     background: url("../../assets/images/banner/arrow-down.png") no-repeat;
     animation: bounce-fade 1.2s infinite;
 }
-@keyframes bounce-fade {
-    0% {
-        margin-bottom: 10px;
-    }
-    50% {
-        margin-bottom: 20px;
-    }
-    100% {
-        margin-bottom: 10px;
-    }
+.circle_wrapper {
+    position: relative;
+    height: 246px;
+}
+.circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: white;
+}
+.circle_1 {
+    bottom: -200px;
+    left: 248px;
+    opacity: 0.5;
+    position: absolute;
+}
+.circle_2 {
+    width: 230px;
+    height: 230px;
+    bottom: -256px;
+    left: 100px;
+    opacity: 0.2;
+    position: absolute;
+    background-color: transparent;
+    border: 5px solid white;
+}
+.circle_3 {
+    width: 290px;
+    height: 290px;
+    bottom: 200px;
+    left: -1271px;
+    opacity: 0.2;
+    position: absolute;
+    /* background-color: transparent;
+    border: 5px solid white; */
+}
+.circle_4 {
+    width: 161px;
+    height: 592px;
+    bottom: -543px;
+    left: -1088px;
+    transform: matrix(0.66, 0.75, -0.75, 0.66, 0, 0);
+    opacity: 0.2;
+    border-radius: 139px;
+    position: absolute;
+}
+.circle_5 {
+    width: 110px;
+    height: 454px;
+    bottom: -314px;
+    left: -1018px;
+    transform: matrix(0.66, 0.75, -0.75, 0.66, 0, 0);
+    opacity: 0.2;
+    border-radius: 139px;
+    position: absolute;
+}
+.circle_6 {
+    width: 204px;
+    height: 454px;
+    bottom: 192px;
+    left: 273px;
+    transform: matrix(0.66, 0.75, -0.75, 0.66, 0, 0);
+    opacity: 0.2;
+    border-radius: 139px;
+    position: absolute;
+}
+.circle_7 {
+    width: 122px;
+    height: 256px;
+    bottom: 114px;
+    left: 276px;
+    transform: matrix(0.66, 0.75, -0.75, 0.66, 0, 0);
+    opacity: 0.2;
+    border-radius: 139px;
+    position: absolute;
+}
+.circle_8 {
+    width: 40px;
+    height: 40px;
+    bottom: 254px;
+    left: -600px;
+    transform: matrix(0.66, 0.75, -0.75, 0.66, 0, 0);
+    opacity: 0.2;
+    border-radius: 139px;
+    position: absolute;
+}
+.circle_9 {
+    width: 20px;
+    height: 20px;
+    bottom: 230px;
+    left: -565px;
+    transform: matrix(0.66, 0.75, -0.75, 0.66, 0, 0);
+    opacity: 0.2;
+    border-radius: 139px;
+    position: absolute;
+    background-color: transparent;
+    border: 5px solid white;
 }
