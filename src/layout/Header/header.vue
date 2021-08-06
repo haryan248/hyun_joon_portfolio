@@ -1,10 +1,10 @@
 <template>
     <div>
-        <header class="Header_Header" :class="{ Header_background: checkHeight }">
-            <div class="Header_content">
-                <div class="Header_title">Hyun Joon's Portfolio</div>
-                <div class="Header_navigation-menus">
-                    <div @click="moveTotab(HeaderNavMenu.id)" class="Header_navigation-menu" v-for="(HeaderNavMenu, index) in HeaderNavMenus" :key="index">
+        <header class="section_header" :class="{ header_background: checkHeight }">
+            <div class="header_content">
+                <div class="header_title">Hyun Joon</div>
+                <div class="header_navigation-menus">
+                    <div @click="moveTotab(HeaderNavMenu.id)" class="header_navigation-menu" v-for="(HeaderNavMenu, index) in HeaderNavMenus" :key="index">
                         {{ HeaderNavMenu.name }}
                     </div>
                 </div>
@@ -38,7 +38,7 @@ export default {
             if (
                 this.scrollHeight &&
                 document.getElementsByClassName("section_myinfo")[0] &&
-                this.scrollHeight + document.getElementsByClassName("section_myinfo")[0].offsetHeight >= document.getElementsByClassName("Header_Header")[0].offsetTop
+                this.scrollHeight + document.getElementsByClassName("section_header")[0].offsetHeight >= document.getElementsByClassName("section_myinfo")[0].offsetTop
             ) {
                 return true;
             } else {
