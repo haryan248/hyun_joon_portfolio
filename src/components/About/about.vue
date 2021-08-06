@@ -5,6 +5,17 @@
                 <span class="section_title">ABOUT ME</span>
             </div>
         </div>
+        <div class="myinfo_profile-infos" :class="[{ 'stagger-item': checkHeight }, { 'stagger-item-out': !checkHeight && !firstLoad }, { info_opacity_zero: firstLoad }]">
+            <div class="myinfo_profile-info-wrapper" v-for="my_item in myData" :key="my_item.label">
+                <div class="myinfo_profile-info">
+                    <div class="myinfo_profile-img-wrapper"><img class="myinfo_profile-img" :src="my_item.url" /></div>
+                    <div class="AboutMe_field">
+                        <div class="AboutMe_field-label">{{ my_item.label }}</div>
+                        <div class="AboutMe_field-value">{{ my_item.value }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="myinfo_container">
             <div class="myinfo_introduce" :class="[{ 'stagger-item': checkHeight }, { 'stagger-item-out': !checkHeight && !firstLoad }, { info_opacity_zero: firstLoad }]">
                 <div class="myinfo_introduce_title">성장하는 개발자</div>
@@ -26,7 +37,15 @@ export default {
         scrollHeight: Number,
     },
     data() {
-        return { firstLoad: false, checkHeight: false };
+        return {
+            firstLoad: false,
+            checkHeight: false,
+            myData: [
+                { label: "이름", value: "하현준", url: require("@/assets/images/aboutme/user.png") },
+                { label: "이메일", value: "haryan96@naver.com", url: require("@/assets/images/aboutme/email.png") },
+                { label: "연락처", value: "T. +82 (0)10-7167-3708", url: require("@/assets/images/aboutme/call.png") },
+            ],
+        };
     },
     mounted() {
         if (this.scrollHeight < document.getElementsByClassName("section_myinfo")[0].offsetTop - 200) {

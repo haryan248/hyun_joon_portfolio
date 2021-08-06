@@ -19,7 +19,7 @@
     box-sizing: initial;
     display: flex;
     justify-content: center;
-    padding: 80px 0;
+    padding: 30px 0 80px 0;
     width: 100%;
     height: max-content;
     text-align: center;
@@ -27,8 +27,10 @@
 .myinfo_section_title_wrap .section_title {
     color: #ffffff;
     border-bottom-color: #cccccc;
-    border-bottom-width: 1px;
+    border-bottom-width: 9px;
     border-bottom-style: solid;
+    border-image: linear-gradient(90deg, #78ace4, #6f41b6);
+    border-image-slice: 1;
     font-family: AppleSDGothicNeoEB00;
     font-size: 3rem;
     line-height: 1.5;
@@ -61,4 +63,49 @@
 
 .highlight {
     color: #78ace4;
+}
+
+.myinfo_profile-infos {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    margin-bottom: 5rem;
+    margin-top: -5rem;
+}
+.myinfo_profile-infos .myinfo_profile-info-wrapper:first-child,
+.myinfo_profile-infos .myinfo_profile-info-wrapper:nth-child(2),
+.myinfo_profile-infos .myinfo_profile-info-wrapper:nth-child(3) {
+    margin-bottom: 2rem;
+}
+
+.myinfo_profile-info-wrapper {
+    width: 33.3333%;
+}
+.myinfo_profile-info {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 14rem;
+    margin-right: 2rem;
+}
+.myinfo_profile-img-wrapper {
+    width: 2rem;
+    min-width: 2rem;
+    height: 2rem;
+    margin-top: 0.2rem;
+    margin-right: 2rem;
+}
+.AboutMe_field {
+    margin-right: 2rem;
+}
+.AboutMe_field .AboutMe_field-label {
+    margin-bottom: 0.5rem;
+    font-size: 20px;
+    font-family: AppleSDGothicNeoM00;
+}
+.AboutMe_field .AboutMe_field-value {
+    font-size: 14px;
+    font-family: AppleSDGothicNeoR00;
+    white-space: nowrap;
 }
