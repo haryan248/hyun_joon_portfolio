@@ -26,10 +26,10 @@
     left: 50%;
     opacity: 0;
     font-family: AppleSDGothicNeoSB00;
-    font-size: 40px;
+    font-size: 26px;
     color: #fff;
     text-align: center;
-    transform: translateX(-50%) translateY(58%);
+    transform: translateX(-50%) translateY(100%);
     /* transform: translateX(-50%) translateY(-50%); */
 }
 
@@ -54,11 +54,11 @@ card-text h5 {
 @keyframes slideTextShow {
     from {
         opacity: 0;
-        transform: translateX(-50%) translateY(90%);
+        transform: translateX(-50%) translateY(120%);
     }
     to {
         opacity: 1;
-        transform: translateX(-50%) translateY(58%);
+        transform: translateX(-50%) translateY(100%);
     }
 }
 
