@@ -1,18 +1,15 @@
 .career_companies {
     width: 90%;
     margin: 0 auto;
+    margin-bottom: 5rem;
 }
 .career_company {
-    display: -webkit-flex;
-    display: -moz-box;
     display: flex;
-    display: -ms-flexbox;
     flex-flow: row nowrap;
     justify-content: center;
 }
 .career_logo-container {
     padding-right: 3rem;
-    border-right: 1px solid #fff;
 }
 .career_logo-wrapper {
     display: flex;
