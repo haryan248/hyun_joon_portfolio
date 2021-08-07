@@ -46,9 +46,20 @@
     padding: 20px;
     display: flex;
     align-items: center;
-    flex-flow: column;
+    flex-flow: row;
     width: 50%;
     height: 100%;
+}
+.myinfo_img-wrapper {
+}
+.myinfo_img {
+    height: 300px;
+    width: 300px;
+}
+.myinfo_introduce-wrapper {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
 }
 .myinfo_introduce_title {
     margin-bottom: 5.5%;
