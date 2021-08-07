@@ -1,4 +1,4 @@
-@keyframes AnimationName {
+@keyframes backgroundAnimation {
     0% {
         background-position: 0% 50%;
     }
@@ -9,7 +9,6 @@
         background-position: 0% 50%;
     }
 }
-
 @keyframes bannerLeftShow {
     from {
         opacity: 0;
@@ -41,12 +40,41 @@
         margin-bottom: 10px;
     }
 }
-
+@keyframes circleAnimation {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+}
+@keyframes pillAnimationTop {
+    from {
+        opacity: 0;
+        transform: rotate(45deg) translate(-50%, -50%);
+    }
+    to {
+        opacity: 0.5;
+        transform: rotate(45deg) translate(0, 0);
+    }
+}
+@keyframes pillAnimationBottom {
+    from {
+        opacity: 0;
+        transform: rotate(45deg) translate(50%, 50%);
+    }
+    to {
+        opacity: 0.5;
+        transform: rotate(45deg) translate(0, 0);
+    }
+}
 .section_banner {
     position: relative;
     background: linear-gradient(65deg, #2a153d, #6f41b6, #4e95e2, #18d3a7);
     background-size: 400% 400%;
-    animation: AnimationName 8s ease infinite;
+    animation: backgroundAnimation 8s ease infinite;
     overflow: hidden;
 }
 .section_banner:before {
@@ -107,29 +135,28 @@
     background: url("../../assets/images/banner/arrow-down.png") no-repeat;
     animation: bounce-fade 1.2s infinite;
 }
-.circle_wrapper {
+.bannerDesign_wrapper {
     position: relative;
     height: 246px;
 }
 .circle {
     width: 300px;
     height: 300px;
+    opacity: 0.5;
     border-radius: 50%;
     background-color: white;
+    position: absolute;
+    animation: circleAnimation;
 }
 .circle_1 {
     bottom: -200px;
     left: 248px;
-    opacity: 0.5;
-    position: absolute;
 }
 .circle_2 {
     width: 230px;
     height: 230px;
     bottom: -256px;
     left: 100px;
-    opacity: 0.2;
-    position: absolute;
     background-color: transparent;
     border: 5px solid white;
 }
@@ -138,70 +165,53 @@
     height: 290px;
     bottom: 200px;
     left: -1271px;
-    opacity: 0.2;
-    position: absolute;
-    /* background-color: transparent;
-    border: 5px solid white; */
 }
 .circle_4 {
-    width: 161px;
-    height: 592px;
-    bottom: -543px;
-    left: -1088px;
-    transform: matrix(0.66, 0.75, -0.75, 0.66, 0, 0);
-    opacity: 0.2;
-    border-radius: 139px;
-    position: absolute;
-}
-.circle_5 {
-    width: 110px;
-    height: 454px;
-    bottom: -314px;
-    left: -1018px;
-    transform: matrix(0.66, 0.75, -0.75, 0.66, 0, 0);
-    opacity: 0.2;
-    border-radius: 139px;
-    position: absolute;
-}
-.circle_6 {
-    width: 204px;
-    height: 454px;
-    bottom: 192px;
-    left: 273px;
-    transform: matrix(0.66, 0.75, -0.75, 0.66, 0, 0);
-    opacity: 0.2;
-    border-radius: 139px;
-    position: absolute;
-}
-.circle_7 {
-    width: 122px;
-    height: 256px;
-    bottom: 114px;
-    left: 276px;
-    transform: matrix(0.66, 0.75, -0.75, 0.66, 0, 0);
-    opacity: 0.2;
-    border-radius: 139px;
-    position: absolute;
-}
-.circle_8 {
     width: 40px;
     height: 40px;
     bottom: 254px;
     left: -600px;
-    transform: matrix(0.66, 0.75, -0.75, 0.66, 0, 0);
-    opacity: 0.2;
-    border-radius: 139px;
-    position: absolute;
 }
-.circle_9 {
+.circle_5 {
     width: 20px;
     height: 20px;
     bottom: 230px;
     left: -565px;
-    transform: matrix(0.66, 0.75, -0.75, 0.66, 0, 0);
-    opacity: 0.2;
+    background-color: transparent;
+    border: 3px solid white;
+}
+.pill {
+    opacity: 0.5;
+    background-color: white;
+    transform: rotate(45deg);
     border-radius: 139px;
     position: absolute;
-    background-color: transparent;
-    border: 5px solid white;
+}
+.pill_1 {
+    width: 161px;
+    height: 592px;
+    bottom: -543px;
+    left: -1088px;
+    animation: pillAnimationBottom;
+}
+.pill_2 {
+    width: 110px;
+    height: 454px;
+    bottom: -314px;
+    left: -1018px;
+    animation: pillAnimationBottom;
+}
+.pill_3 {
+    width: 204px;
+    height: 454px;
+    bottom: 192px;
+    left: 273px;
+    animation: pillAnimationTop;
+}
+.pill_4 {
+    width: 122px;
+    height: 256px;
+    bottom: 114px;
+    left: 276px;
+    animation: pillAnimationTop;
 }
