@@ -2,7 +2,7 @@
     <div :class="'project_wrapper_' + index">
         <div class="project_container" :class="computedClass">
             <div v-if="index % 2 === 0" class="project_img">
-5+                <ImgSwiper :images="projects.images" :swiperIndex="index" />
+                <ImgSwiper :images="projects.images" :swiperIndex="index" />
             </div>
             <div class="project_intro">
                 <div class="project_intro_title">
@@ -41,9 +41,10 @@ export default {
     },
     data() {
         return {
-            checkHeight: false,
+            currentScroll: false,
             project_index: 0,
             project_container: "",
+            project_element: document.getElementsByClassName(`project_wrapper_${this.index}`),
         };
     },
     computed: {
@@ -54,18 +55,15 @@ export default {
                 return "stagger-item-out";
             }
         },
+        checkHeight() {
+            if (this.scrollHeight >= this.project_element[0]?.offsetTop - 400) {
+                return true;
+            }
+            return false;
+        },
     },
     mounted() {
         this.project_index = this.index + 1 < 10 ? "0" + (this.index + 1) : this.index + 1;
-    },
-    watch: {
-        scrollHeight() {
-            if (this.scrollHeight >= document.getElementsByClassName(`project_wrapper_${this.index}`)[0].offsetTop - 400) {
-                this.checkHeight = true;
-            } else {
-                this.checkHeight = false;
-            }
-        },
     },
 };
 </script>
