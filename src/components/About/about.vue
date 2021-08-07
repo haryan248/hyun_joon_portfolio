@@ -1,12 +1,12 @@
 <template>
     <div class="section_myinfo">
-        <div class="myinfo_content" :class="[{ 'stagger-item': checkHeight }, { 'stagger-item-out': !checkHeight && !firstLoad }, { info_opacity_zero: firstLoad }]">
+        <div class="myinfo_content" :class="computedClass">
             <div class="myinfo_section_title_wrap">
                 <span class="section_title">ABOUT ME</span>
             </div>
         </div>
         <!-- profile -->
-        <div class="myinfo_profile-infos" :class="[{ 'stagger-item': checkHeight }, { 'stagger-item-out': !checkHeight && !firstLoad }, { info_opacity_zero: firstLoad }]">
+        <div class="myinfo_profile-infos" :class="computedClass">
             <div class="myinfo_profile-info-wrapper" v-for="my_item in myData" :key="my_item.label">
                 <div class="myinfo_profile-info">
                     <div class="myinfo_profile-img-wrapper"><img class="myinfo_profile-img" :src="my_item.url" /></div>
@@ -19,7 +19,7 @@
         </div>
         <!-- information -->
         <div class="myinfo_container">
-            <div class="myinfo_introduce" :class="[{ 'stagger-item': checkHeight }, { 'stagger-item-out': !checkHeight && !firstLoad }, { info_opacity_zero: firstLoad }]">
+            <div class="myinfo_introduce" :class="computedClass">
                 <div class="myinfo_img-wrapper">
                     <img class="myinfo_img" :src="profileImg" />
                 </div>
@@ -45,8 +45,7 @@ export default {
     },
     data() {
         return {
-            firstLoad: false,
-            checkHeight: false,
+            aboutElement: document.getElementsByClassName("section_myinfo"),
             profileImg: require("@/assets/images/aboutme/HJ.jpg"),
             myData: [
                 { label: "이름", value: "하현준", url: require("@/assets/images/aboutme/user.png") },
@@ -55,23 +54,21 @@ export default {
             ],
         };
     },
-    mounted() {
-        if (this.scrollHeight < document.getElementsByClassName("section_myinfo")[0].offsetTop - 200) {
-            this.firstLoad = true;
-        }
-    },
-
-    watch: {
-        scrollHeight() {
-            if (this.scrollHeight >= document.getElementsByClassName("section_myinfo")[0].offsetTop - 200) {
-                if (this.firstLoad) this.firstLoad = false;
-                this.checkHeight = true;
+    computed: {
+        computedClass() {
+            if (this.checkHeight) {
+                return "stagger-item";
             } else {
-                this.checkHeight = false;
+                return "stagger-item-out";
             }
         },
+        checkHeight() {
+            if (this.scrollHeight >= this.aboutElement[0]?.offsetTop - 400) {
+                return true;
+            }
+            return false;
+        },
     },
-    methods: {},
 };
 </script>
 

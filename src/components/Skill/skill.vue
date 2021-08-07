@@ -1,6 +1,6 @@
 <template>
     <section class="section_skill">
-        <div class="skill_content" :class="[{ 'stagger-item': checkHeight }, { 'stagger-item-out': !checkHeight }]">
+        <div class="skill_content" :class="computedClass">
             <div class="skill_section_title_wrap">
                 <span class="section_title">SKILLS</span>
             </div>
@@ -22,8 +22,8 @@ export default {
     props: { scrollHeight: Number },
     data() {
         return {
-            checkHeight: false,
             durationList: [],
+            skillElement: document.getElementsByClassName("section_skill"),
             skills: {
                 FrontEnd: [
                     { id: 0, label: "HTML5", value: "75" },
@@ -45,6 +45,21 @@ export default {
             },
         };
     },
+    computed: {
+        computedClass() {
+            if (this.checkHeight) {
+                return "stagger-item";
+            } else {
+                return "stagger-item-out";
+            }
+        },
+        checkHeight() {
+            if (this.scrollHeight >= this.skillElement[0]?.offsetTop - 400) {
+                return true;
+            }
+            return false;
+        },
+    },
     mounted() {
         this.setAnimationStyle();
     },
@@ -58,16 +73,6 @@ export default {
             for (let i = 0; i < this.skills.FrontEnd.length + this.skills.BackEnd.length + this.skills.ConfigurationManagement.length + this.skills.Communication.length; i++) {
                 duration += 0.3;
                 this.durationList.push(duration);
-            }
-        },
-    },
-
-    watch: {
-        scrollHeight() {
-            if (this.scrollHeight >= document.getElementsByClassName("section_skill")[0].offsetTop - 400) {
-                this.checkHeight = true;
-            } else {
-                this.checkHeight = false;
             }
         },
     },

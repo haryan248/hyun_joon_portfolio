@@ -6,7 +6,7 @@
             </div>
             <div class="project_intro">
                 <div class="project_intro_title">
-                    <span class="highlight">{{ project_index }}</span> {{ projects.title }}
+                    <span class="highlight">{{ projectIndex }}</span> {{ projects.title }}
                 </div>
                 <div class="project_intro_text">
                     <div class="project_intro-description" v-html="projects.description"></div>
@@ -42,9 +42,8 @@ export default {
     data() {
         return {
             currentScroll: false,
-            project_index: 0,
-            project_container: "",
-            project_element: document.getElementsByClassName(`project_wrapper_${this.index}`),
+            projectIndex: 0,
+            projectElement: document.getElementsByClassName(`project_wrapper_${this.index}`),
         };
     },
     computed: {
@@ -56,14 +55,14 @@ export default {
             }
         },
         checkHeight() {
-            if (this.scrollHeight >= this.project_element[0]?.offsetTop - 400) {
+            if (this.scrollHeight >= this.projectElement[0]?.offsetTop - 400) {
                 return true;
             }
             return false;
         },
     },
     mounted() {
-        this.project_index = this.index + 1 < 10 ? "0" + (this.index + 1) : this.index + 1;
+        this.projectIndex = this.index + 1 < 10 ? "0" + (this.index + 1) : this.index + 1;
     },
 };
 </script>
