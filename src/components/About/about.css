@@ -47,14 +47,16 @@
     display: flex;
     align-items: center;
     flex-flow: row;
-    width: 50%;
+    width: 70%;
     height: 100%;
 }
 .myinfo_img-wrapper {
+    margin-right: 2rem;
 }
 .myinfo_img {
-    height: 300px;
     width: 300px;
+    border-radius: 9px;
+    border: 3px solid #cccccc;
 }
 .myinfo_introduce-wrapper {
     display: flex;
