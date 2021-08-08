@@ -127,14 +127,12 @@
         font-size: 2rem;
     }
     .myinfo_profile-infos {
-        flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        margin: 0 auto;
+        margin-bottom: 2rem;
     }
     .myinfo_profile-info {
-        max-width: fit-content;
-
+        justify-content: flex-start;
         margin: 0 auto;
     }
     .myinfo_profile-info-wrapper {

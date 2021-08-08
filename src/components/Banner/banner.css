@@ -125,11 +125,13 @@
 }
 .banner_more-button {
     display: block;
-    padding: 1rem 2rem;
+    width: 24px;
+    height: 24px;
     cursor: pointer;
     position: absolute;
-    bottom: 10px;
+    bottom: 2%;
     left: 50%;
+    transform: translate(-50%, -50%);
     background-position: center;
     background-size: 200%;
     background: url("../../assets/images/banner/arrow-down.png") no-repeat;

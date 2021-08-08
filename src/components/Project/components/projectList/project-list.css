@@ -12,7 +12,6 @@
 .project_img {
     margin: 9% 2%;
     width: 50%;
-    height: 500px;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -26,7 +25,7 @@
 .project_intro_title {
     padding: 0 5%;
     width: 100%;
-    font-size: 2em;
+    font-size: 2rem;
     font-family: AppleSDGothicNeoEB00;
     text-align: left;
     letter-spacing: 0.05em;
@@ -99,5 +98,17 @@
     }
     .project_img {
         width: 100%;
+    }
+    .card-text {
+        font-size: 1.3rem;
+    }
+    .project_intro_title {
+        margin-top: 15px;
+        padding: 0;
+        font-size: 1.7rem;
+        text-align: center;
+    }
+    .project_intro_button {
+        font-size: 0.8rem;
     }
 }
