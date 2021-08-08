@@ -76,7 +76,7 @@
     line-height: 50px;
     text-align: center;
     font-size: 1.1em;
-    font-family: "AppleSDGothicNeoEB00";
+    font-family: AppleSDGothicNeoEB00;
     cursor: pointer;
     border-radius: 4px;
     border: 1.5px solid #78ace4;
@@ -103,10 +103,23 @@
     .project_intro_title {
         margin-top: 15px;
         padding: 0;
-        font-size: 1.7rem;
+        font-size: 1.3rem;
         text-align: center;
+    }
+    .project_intro_text {
+        padding: 10% 5%;
+    }
+    .project_intro_text p {
+        margin-bottom: 15%;
     }
     .project_intro_button {
         font-size: 0.8rem;
+    }
+    .project_intro-description {
+        font-size: 0.9rem;
+    }
+    .project_description .projects_label,
+    .project_description .projects_value {
+        font-size: 0.9rem;
     }
 }

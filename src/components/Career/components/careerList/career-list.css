@@ -1,7 +1,6 @@
 .career_companies {
     width: 90%;
     margin: 0 auto;
-    margin-bottom: 5rem;
 }
 .career_company {
     display: flex;
@@ -52,4 +51,36 @@
 .career_works-period {
     margin: 0 0 1rem -1rem;
     font-size: 0.9rem;
+}
+.career_works-item {
+    font-size: 1rem;
+}
+
+@media all and (max-width: 767px) {
+    .career_company {
+        flex-direction: column;
+    }
+    .career_logo-container {
+        padding-right: 0;
+    }
+    .career_logo-wrapper {
+        width: 16rem;
+        margin: 0 auto;
+    }
+    .career_info {
+        padding-left: 0;
+        padding: 0 1rem 0 1rem;
+    }
+    .career_title {
+        font-size: 1.3rem;
+    }
+    .career_period {
+        font-size: 1rem;
+    }
+    .career_description {
+        font-size: 0.9rem;
+    }
+    .career_works-item {
+        font-size: 0.9rem;
+    }
 }

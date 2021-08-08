@@ -1,5 +1,5 @@
 <template>
-    <section class="section_skill">
+    <section class="section_skill background_black">
         <div class="skill_content" :class="computedClass">
             <div class="skill_section_title_wrap">
                 <span class="section_title border_bottom">SKILLS</span>

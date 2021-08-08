@@ -50,35 +50,34 @@
 }
 .side_bar-wrapper .side_bar-menus {
     width: 100%;
-    padding: 70px 0 16px;
+    padding: 17px 0 16px;
     box-sizing: border-box;
 }
 .side_bar-menus .menu_title {
     width: 100%;
-    padding: 0 30px 24px;
+    padding: 0 3rem 0;
     box-sizing: border-box;
     color: #333;
     font-size: 20px;
     line-height: 1;
-    font-family: AppleSDGothicNeoEB00;
+    font-family: AppleSDGothicNeoH00;
+    border-style: solid;
+    border-image: linear-gradient(90deg, #78ace4, #6f41b6);
+    border-image-slice: 1;
+    border-image-width: 0 0 5px 0;
 }
 .side_bar-wrapper .side_bar-menus .side_bar-menu {
     width: 100%;
-    padding: 0 30px;
+    padding: 0 2rem;
     box-sizing: border-box;
-    border-bottom-color: #cccccc;
-    border-bottom-width: 7px;
-    border-bottom-style: solid;
-    border-image: linear-gradient(90deg, #78ace4, #6f41b6);
-    border-image-slice: 1;
 }
 .header_navigation-mobile-menu {
     display: flex;
     padding: 0 1rem;
-    font-family: AppleSDGothicNeoM00;
+    font-family: AppleSDGothicNeoB00;
     font-size: 1.2rem;
     color: black;
     line-height: 2rem;
     cursor: pointer;
-    margin-bottom: 1rem;
+    margin-top: 1rem;
 }

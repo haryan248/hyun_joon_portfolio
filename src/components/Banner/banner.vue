@@ -1,5 +1,5 @@
 <template>
-    <div class="section_banner">
+    <div class="section_banner ">
         <div class="banner_content">
             <div class="banner_title">
                 <div class="banner_animaiton-left">WELCOME!</div>

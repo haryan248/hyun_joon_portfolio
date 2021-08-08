@@ -73,3 +73,11 @@
 .header_title {
     color: #fff;
 }
+@media all and (max-width: 767px) {
+    .header_content {
+        height: 4rem;
+    }
+    .header_hamburger-wrapper {
+        padding: 0.3rem 0;
+    }
+}

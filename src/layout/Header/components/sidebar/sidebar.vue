@@ -11,7 +11,7 @@
                             <img :src="closeButton" />
                         </section>
                         <section class="side_bar-menus">
-                            <div class="menu_title"><p>HyunJoon Portfolio</p></div>
+                            <div class="menu_title"><p>HYUNJOON</p></div>
                             <div class="side_bar-menu">
                                 <div @click="moveTotab(HeaderNavMenu.id)" class="header_navigation-mobile-menu" v-for="(HeaderNavMenu, index) in HeaderNavMenus" :key="index">
                                     {{ HeaderNavMenu.name }}

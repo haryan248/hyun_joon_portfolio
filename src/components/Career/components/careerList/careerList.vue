@@ -15,7 +15,7 @@
                         <h4 class="career_works-title">{{ work.title }}</h4>
                         <h5 class="career_works-period">{{ work.period }}</h5>
                         <div v-for="(work_item, index) in work.description" :key="index">
-                            <li>{{ work_item }}</li>
+                            <li class="career_works-item">{{ work_item }}</li>
                         </div>
                     </div>
                 </ul>

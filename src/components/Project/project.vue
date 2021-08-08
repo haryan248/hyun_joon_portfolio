@@ -64,12 +64,13 @@ export default {
                 },
                 {
                     title: "포트폴리오 사이트",
-                    description: " <p>Vue.js 기반으로 제작한 포트폴리오 사이트입니다.<br /><br />저의 소개, 프로젝트, 인턴 경험을 보기 쉽게 나열한 포트폴리오 사이트입니다.</p>",
+                    description:
+                        " <p>Vue.js 기반으로 제작한 포트폴리오 사이트입니다.<br /><br />저의 소개, 프로젝트, 인턴 경험을 보기 쉽게 나열한 포트폴리오 사이트입니다. Vue.js로만 개발한 웹사이트이며, 나중에 보완하거나 추가할 사항이 생기면 주기적으로 업데이트 할 예정입니다.</p>",
                     participant: { label: "참여 인원", value: "1 명" },
                     duration: { label: "개발 기간", value: "2021.07.31 ~ 2021.08.10" },
-                    function: { label: "주요 내용", value: "About me, Skills, Projects, Career" },
+                    function: { label: "주요 내용", value: "간단한 자기소개, 보유 기술 스택, 프로젝트 경험, 업무 경력 등" },
                     frontend: { label: "Front-End", value: "Vue.js" },
-                    deployment: { label: "Deployment", value: "github" },
+                    deployment: { label: "Deployment", value: "GitHub" },
                     github: "https://github.com/haryan248/hyun_joon_portfolio",
                     images: [
                         { title: "로그인, 회원가입", url: require("@/assets/images/project/Upass/login+signup.png") },

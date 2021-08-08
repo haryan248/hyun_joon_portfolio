@@ -30,4 +30,7 @@
     .project_section_title_wrap .section_title {
         font-size: 2rem;
     }
+    .project_content {
+        padding: 4rem 2rem 2rem 2rem;
+    }
 }

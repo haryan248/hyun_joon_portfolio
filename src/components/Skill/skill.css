@@ -200,7 +200,7 @@
     display: block;
     height: 20px;
     line-height: 22.5px;
-    font-size: 12px;
+    font-size: 1rem;
     background: linear-gradient(90deg, #78ace4, #6f41b6);
     text-align: right;
     border-radius: 5px;
@@ -277,9 +277,6 @@
 }
 
 @media all and (max-width: 767px) {
-    .skill_section_title_wrap .section_title {
-        font-size: 2rem;
-    }
     .skill_container {
         width: 80%;
     }
@@ -289,7 +286,12 @@
     .status_bar-title {
         font-size: 0.3rem;
     }
+
     .status_bar-percent {
+        height: 17px;
+        line-height: 18.5px;
         font-size: 0.7rem;
+        border-radius: 3px;
+        padding-right: 10px;
     }
 }
