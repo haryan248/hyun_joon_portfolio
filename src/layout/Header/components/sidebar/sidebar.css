@@ -81,3 +81,38 @@
     cursor: pointer;
     margin-top: 1rem;
 }
+.side_bar-link-wrapper {
+    position: relative;
+}
+.side_bar-link {
+    width: 100%;
+    box-sizing: border-box;
+    bottom: 0;
+    position: absolute;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.link_icon-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 2px;
+    margin-bottom: 1.5rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+.link_icon-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.link_icon {
+    width: 100%;
+    margin: 0 2rem 0 0;
+}
+.link_icon-container .icon_title {
+    color: black;
+    font-family: AppleSDGothicNeoB00;
+}

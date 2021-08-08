@@ -7,17 +7,27 @@
             <div v-if="sidebarStatus" class="modal_overlay" @click="toggleSidebar">
                 <div class="dialog" @click.stop>
                     <div class="side_bar-wrapper">
-                        <section class="side_bar-close" @click="toggleSidebar">
+                        <div class="side_bar-close" @click="toggleSidebar">
                             <img :src="closeButton" />
-                        </section>
-                        <section class="side_bar-menus">
+                        </div>
+                        <div class="side_bar-menus">
                             <div class="menu_title"><p>HYUNJOON</p></div>
                             <div class="side_bar-menu">
                                 <div @click="moveTotab(HeaderNavMenu.id)" class="header_navigation-mobile-menu" v-for="(HeaderNavMenu, index) in HeaderNavMenus" :key="index">
                                     {{ HeaderNavMenu.name }}
                                 </div>
                             </div>
-                        </section>
+                        </div>
+                        <div class="side_bar-link">
+                            <a v-for="(link_item, index) in linkData" :href="link_item.link" :key="index" target="_blank">
+                                <div class="link_icon-wrapper" :title="link_item.title">
+                                    <div class="link_icon-container">
+                                        <img class="link_icon" :src="link_item.url" />
+                                        <div class="icon_title">{{ link_item.title }}</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -32,6 +42,23 @@ export default {
             sidebarStatus: false,
             closeButton: require("@/assets/images/header/cancel.png"),
             hamburgerMenu: require("@/assets/images/header/hamburger_button_menu_icon.png"),
+            linkData: [
+                {
+                    link: "https://github.com/haryan248",
+                    title: "GitHub",
+                    url: require("@/assets/images/footer/github.png"),
+                },
+                {
+                    link: "https://www.instagram.com/h__.__joon/",
+                    title: "Instagram",
+                    url: require("@/assets/images/footer/instagram.png"),
+                },
+                {
+                    link: "mailto:haryan96@gmail.com",
+                    title: "Mail",
+                    url: require("@/assets/images/footer/email.png"),
+                },
+            ],
         };
     },
     props: { HeaderNavMenus: Array, checkWidth: Boolean },
