@@ -20,6 +20,7 @@ export default {
     mounted() {
         window.addEventListener("scroll", this.handleScroll);
         window.addEventListener("resize", this.handleResize);
+        this.bodyWidth = this.$refs.app?.clientWidth;
     },
     beforeDestroy() {
         window.removeEventListener("scroll", this.handleScroll);
