@@ -1,5 +1,4 @@
 /* about me css*/
-
 .section_myinfo {
     display: flex;
     justify-content: center;
@@ -19,6 +18,7 @@
     box-sizing: initial;
     display: flex;
     justify-content: center;
+    padding: 1rem 0;
     width: 100%;
     height: max-content;
     text-align: center;
@@ -61,11 +61,9 @@
     font-size: 1.2em;
     font-family: AppleSDGothicNeoR00;
 }
-
 .highlight {
     color: #78ace4;
 }
-
 .myinfo_profile-infos {
     display: flex;
     flex-flow: row wrap;
@@ -77,7 +75,6 @@
 .myinfo_profile-infos .myinfo_profile-info-wrapper:nth-child(3) {
     margin-bottom: 2rem;
 }
-
 .myinfo_profile-info-wrapper {
     width: 33.3333%;
 }

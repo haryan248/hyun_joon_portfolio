@@ -1,3 +1,26 @@
+/* img-swiper css */
+@keyframes slideTextShow {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-80%);
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-60%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-50%);
+    }
+}
+@keyframes slideImgShow {
+    from {
+        opacity: 0.2;
+    }
+    to {
+        opacity: 1;
+    }
+}
 .swiper_wrapper {
     width: 100%;
 }
@@ -31,28 +54,6 @@
 }
 .card-text-animation {
     animation: slideTextShow 3s 1;
-}
-@keyframes slideTextShow {
-    0% {
-        opacity: 0;
-        transform: translateX(-50%) translateY(-80%);
-    }
-    50% {
-        opacity: 1;
-        transform: translateX(-50%) translateY(-60%);
-    }
-    100% {
-        opacity: 0;
-        transform: translateX(-50%) translateY(-50%);
-    }
-}
-@keyframes slideImgShow {
-    from {
-        opacity: 0.2;
-    }
-    to {
-        opacity: 1;
-    }
 }
 .swiper-pagination-bullet {
     background: #fff;

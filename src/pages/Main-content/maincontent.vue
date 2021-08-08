@@ -29,6 +29,3 @@ export default {
     },
 };
 </script>
-<style scoped>
-@import "./main-content.css";
-</style>

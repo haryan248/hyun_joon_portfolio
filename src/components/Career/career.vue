@@ -4,8 +4,8 @@
             <div class="career_section_title_wrap">
                 <span class="section_title border_bottom">CAREER</span>
             </div>
-            <CareerList v-for="(careers, index) in careers" :key="index" :careers="careers" />
         </div>
+        <CareerList v-for="(careers, index) in careers" :key="index" :careers="careers" />
     </div>
 </template>
 <script>

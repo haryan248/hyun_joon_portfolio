@@ -1,11 +1,3 @@
-body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-#app {
-    background: #181818;
-}
 @font-face {
     src: url("./assets/fonts/AppleSDGothicNeoB.ttf");
     font-family: "AppleSDGothicNeoB00";
@@ -54,6 +46,15 @@ body {
         transform: translateY(100px);
     }
 }
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#app {
+    background: #181818;
+}
+
 .stagger-item {
     animation: textShow 1s;
     opacity: 1;
@@ -65,7 +66,6 @@ body {
 .info_opacity_zero {
     opacity: 0;
 }
-
 .section_title {
     box-sizing: border-box;
     border-style: solid;
@@ -76,5 +76,5 @@ body {
     line-height: 1.5;
 }
 .border_bottom {
-    border-image-width: 0 0 9px 0;
+    border-image-width: 0 0 7px 0;
 }

@@ -1,5 +1,4 @@
 /* project css*/
-
 .section_project {
     display: flex;
     justify-content: center;
@@ -18,13 +17,16 @@
     box-sizing: initial;
     display: flex;
     justify-content: center;
-    padding: 80px 0;
+    padding: 2rem 0 8rem 0;
     width: 100%;
     height: max-content;
     text-align: center;
     color: #fff;
 }
 @media all and (max-width: 767px) {
+    .project_section_title_wrap {
+        padding: 2rem 0 3rem 0;
+    }
     .project_section_title_wrap .section_title {
         font-size: 2rem;
     }
