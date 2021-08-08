@@ -1,5 +1,5 @@
 <template>
-    <div :class="'project_wrapper_' + index">
+    <div class="project_wrapper" :class="'project_wrapper_' + index">
         <div class="project_container" :class="computedClass">
             <div v-if="index % 2 === 0" class="project_img">
                 <ImgSwiper :images="projects.images" :swiperIndex="index" />

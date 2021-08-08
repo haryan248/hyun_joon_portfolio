@@ -1,6 +1,7 @@
 .project_container {
     position: relative;
     display: flex;
+    flex-direction: row;
     margin-bottom: 5%;
     width: 100%;
     border-radius: 10px;
@@ -87,6 +88,16 @@
     color: white;
 }
 .project_intro_button:hover {
-    /* background: linear-gradient(90deg, #78ace4, #6f41b6); */
     background: #78ace4;
+}
+@media all and (max-width: 767px) {
+    .project_wrapper:nth-child(odd) .project_container {
+        flex-direction: column-reverse;
+    }
+    .project_container {
+        flex-direction: column;
+    }
+    .project_img {
+        width: 100%;
+    }
 }

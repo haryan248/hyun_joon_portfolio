@@ -88,3 +88,13 @@ card-text h5 {
     color: #8762bf;
     top: 34%;
 }
+
+@media all and (max-width: 767px) {
+    .swiper_img {
+        height: 170px;
+    }
+    .swiper-slide-active .swiper_img {
+        height: 200px;
+        opacity: 1;
+    }
+}

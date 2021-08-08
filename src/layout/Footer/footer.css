@@ -7,7 +7,8 @@
 }
 .Footer_Footer .Footer_icons {
     margin-bottom: 1rem;
-    border-bottom: 1px solid #fff;
+    padding-top: 2rem;
+    border-top: 1px solid #fff;
 }
 .Footer_Footer .Footer_icons .Footer_icon-wrapper.Footer_bg-white {
     background-color: #fff;

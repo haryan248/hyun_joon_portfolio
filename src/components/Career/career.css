@@ -26,3 +26,23 @@
     font-size: 3rem;
     line-height: 1.5;
 }
+@media all and (max-width: 767px) {
+    .career_section_title_wrap .section_title {
+        font-size: 2rem;
+    }
+    .career_content {
+        padding: 2rem 2rem;
+    }
+    .career_company {
+        flex-direction: column;
+    }
+    .career_logo-container {
+        padding-right: 0;
+    }
+    .career_logo-wrapper {
+        width: 100%;
+    }
+    .career_info {
+        padding-left: 0;
+    }
+}

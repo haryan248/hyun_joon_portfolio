@@ -34,3 +34,8 @@
     font-size: 3rem;
     line-height: 1.5;
 }
+@media all and (max-width: 767px) {
+    .project_section_title_wrap .section_title {
+        font-size: 2rem;
+    }
+}

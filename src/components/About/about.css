@@ -19,7 +19,7 @@
     box-sizing: initial;
     display: flex;
     justify-content: center;
-    padding: 30px 0 80px 0;
+    /* padding: 30px 0 80px 0; */
     width: 100%;
     height: max-content;
     text-align: center;
@@ -83,7 +83,6 @@
     flex-flow: row wrap;
     justify-content: flex-start;
     margin-bottom: 5rem;
-    margin-top: -5rem;
 }
 .myinfo_profile-infos .myinfo_profile-info-wrapper:first-child,
 .myinfo_profile-infos .myinfo_profile-info-wrapper:nth-child(2),
@@ -121,4 +120,47 @@
     font-size: 14px;
     font-family: AppleSDGothicNeoR00;
     white-space: nowrap;
+}
+
+@media all and (max-width: 767px) {
+    .myinfo_section_title_wrap .section_title {
+        font-size: 2rem;
+    }
+    .myinfo_profile-infos {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+    .myinfo_profile-info {
+        max-width: fit-content;
+
+        margin: 0 auto;
+    }
+    .myinfo_profile-info-wrapper {
+        width: 100%;
+    }
+    .AboutMe_field .AboutMe_field-label {
+        font-size: 10px;
+    }
+    .myinfo_container {
+        margin-bottom: 0;
+    }
+    .myinfo_introduce {
+        flex-flow: column;
+    }
+    .myinfo_img-wrapper {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+    .myinfo_img {
+        width: 240px;
+    }
+    .myinfo_introduce_title {
+        font-size: 1.4em;
+    }
+    .myinfo_introduce_text {
+        font-size: 1em;
+        margin-bottom: 0;
+    }
 }

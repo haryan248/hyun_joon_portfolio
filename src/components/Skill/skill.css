@@ -51,6 +51,7 @@
 .status_content {
     display: flex;
     justify-content: end;
+    align-items: center;
     margin-bottom: 20px;
 }
 .status_bar-title {
@@ -284,5 +285,22 @@
     100% {
         width: 0;
         color: rgb(255, 255, 255, 0);
+    }
+}
+@media all and (max-width: 767px) {
+    .skill_section_title_wrap .section_title {
+        font-size: 2rem;
+    }
+    .skill_container {
+        width: 80%;
+    }
+    .status_title {
+        font-size: 1rem;
+    }
+    .status_bar-title {
+        font-size: 0.3rem;
+    }
+    .status_bar-percent {
+        font-size: 0.7rem;
     }
 }
