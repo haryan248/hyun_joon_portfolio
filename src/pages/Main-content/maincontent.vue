@@ -1,5 +1,6 @@
 <template>
     <div>
+        <!-- banner -->
         <Banner :scrollHeight="scrollHeight" />
         <!-- about me -->
         <About :scrollHeight="scrollHeight" />
