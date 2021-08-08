@@ -3,10 +3,34 @@
         <header class="section_header" :class="[{ header_background: checkHeight || checkWidth }]">
             <div class="header_content">
                 <div class="header_title">Hyun Joon</div>
-                <div class="header_navigation-menus">
+                <div v-if="checkWidth" :class="{ 'header_hamburger-wrapper': checkWidth }" @click="toggleSidebar">
+                    <img :src="hamburgerMenu" />
+                </div>
+                <div v-if="!checkWidth" class="header_navigation-menus">
                     <div @click="moveTotab(HeaderNavMenu.id)" class="header_navigation-menu" v-for="(HeaderNavMenu, index) in HeaderNavMenus" :key="index">
                         {{ HeaderNavMenu.name }}
                     </div>
+                </div>
+                <div v-else>
+                    <transition>
+                        <div v-if="sidebarStatus" class="modal_overlay" @click="toggleSidebar">
+                            <div class="dialog" @click.stop>
+                                <div class="side-panel-wrapper">
+                                    <section class="side-panel-close" @click="toggleSidebar">
+                                        <img :src="closeButton" />
+                                    </section>
+                                    <section class="gnb-side">
+                                        <div class="mobile-side-message"><p>HyunJoon Portfolio</p></div>
+                                        <div class="mobile-side-menu">
+                                            <div @click="moveTotab(HeaderNavMenu.id)" class="header_navigation-mobile-menu" v-for="(HeaderNavMenu, index) in HeaderNavMenus" :key="index">
+                                                {{ HeaderNavMenu.name }}
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </transition>
                 </div>
             </div>
         </header>
@@ -27,6 +51,8 @@ export default {
                 { id: 3, name: "Projects" },
                 { id: 4, name: "Career" },
             ],
+            hamburgerMenu: require("@/assets/images/header/hamburger_button_menu_icon.png"),
+            closeButton: require("@/assets/images/header/cancel.png"),
             headerElement: document.getElementsByClassName("section_header"),
             aboutElement: document.getElementsByClassName("section_myinfo"),
             showHeader: false,
@@ -34,6 +60,7 @@ export default {
             skillLocation: 0,
             projectLocation: 0,
             careerLocation: 0,
+            sidebarStatus: false,
         };
     },
     computed: {
@@ -70,6 +97,15 @@ export default {
                 window.scrollTo({ top: this.projectLocation, behavior: "smooth" });
             } else if (id === 4) {
                 window.scrollTo({ top: this.careerLocation, behavior: "smooth" });
+            }
+            this.toggleSidebar();
+        },
+        toggleSidebar() {
+            this.sidebarStatus = !this.sidebarStatus;
+            if (this.sidebarStatus) {
+                document.body.style.setProperty("overflow", "hidden");
+            } else {
+                document.body.style.removeProperty("overflow");
             }
         },
     },
