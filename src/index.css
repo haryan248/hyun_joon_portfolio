@@ -6,17 +6,14 @@
     src: url("./assets/fonts/AppleSDGothicNeoEB.ttf");
     font-family: "AppleSDGothicNeoEB00";
 }
-
 @font-face {
     src: url("./assets/fonts/AppleSDGothicNeoH.ttf");
     font-family: "AppleSDGothicNeoH00";
 }
-
 @font-face {
     src: url("./assets/fonts/AppleSDGothicNeoM.ttf");
     font-family: "AppleSDGothicNeoM00";
 }
-
 @font-face {
     src: url("./assets/fonts/AppleSDGothicNeoR.ttf");
     font-family: "AppleSDGothicNeoR00";
@@ -54,7 +51,6 @@ body {
 #app {
     background: #181818;
 }
-
 .stagger-item {
     animation: textShow 1s;
     opacity: 1;
@@ -77,4 +73,10 @@ body {
 }
 .border_bottom {
     border-image-width: 0 0 7px 0;
+}
+
+@media all and (max-width: 767px) {
+    .section_title {
+        font-size: 1.8rem;
+    }
 }
