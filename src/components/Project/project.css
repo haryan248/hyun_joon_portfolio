@@ -25,7 +25,6 @@
 }
 .project_section_title_wrap .section_title {
     color: #ffffff;
-    border-bottom-color: #cccccc;
     border-bottom-width: 9px;
     border-bottom-style: solid;
     border-image: linear-gradient(90deg, #78ace4, #6f41b6);
