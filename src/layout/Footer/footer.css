@@ -1,33 +1,40 @@
-.Footer_Footer {
+.footer_footer {
     padding-top: 3rem;
     padding-bottom: 3rem;
     text-align: center;
     font-family: AppleSDGothicNeoH00;
     color: #fff;
 }
-.Footer_Footer .Footer_icons {
+.footer_icons {
     margin-bottom: 1rem;
     padding-top: 2rem;
     border-top: 1px solid #fff;
 }
-.Footer_Footer .Footer_icons .Footer_icon-wrapper.Footer_bg-white {
+.footer_bg-white {
     background-color: #fff;
 }
 
-.Footer_Footer .Footer_icons .Footer_icon-wrapper {
+.footer_icon-wrapper {
     position: relative;
     display: inline-block;
-    width: 3rem;
-    height: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
     padding: 2px;
     margin: 0 0.5rem;
     margin-bottom: 1.5rem;
     border-radius: 2rem;
     cursor: pointer;
 }
-.Footer_Footer .Footer_icons .Footer_icon-wrapper .Footer_icon {
+.footer_icon {
     width: 100%;
 }
-.Footer_Footer .Footer_copyright {
+.footer_copyright {
+    font-size: 1rem;
     color: #f5f5f5;
+}
+
+@media all and (max-width: 767px) {
+    .footer_footer .footer_copyright {
+        font-size: 0.7rem;
+    }
 }

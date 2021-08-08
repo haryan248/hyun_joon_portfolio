@@ -1,18 +1,14 @@
 <template>
     <div>
-        <footer class="Footer_Footer">
-            <div class="Footer_icons">
-                <a href="https://github.com/haryan248" target="_blank">
-                    <div class="Footer_icon-wrapper Footer_bg-white" title="GitHub"><img class="Footer_icon" src="../../assets/images/footer/github.png" /></div>
-                </a>
-                <a href="https://www.instagram.com/h__.__joon/" target="_blank">
-                    <div class="Footer_icon-wrapper Footer_bg-white" title="Instagram"><img class="Footer_icon" src="../../assets/images/footer/instagram.png" /></div>
-                </a>
-                <a href="mailto:haryan96@gmail.com">
-                    <div class="Footer_icon-wrapper Footer_bg-white" title="Mail"><img class="Footer_icon" src="../../assets/images/footer/email.png" /></div>
+        <footer class="footer_footer">
+            <div class="footer_icons">
+                <a v-for="(footer_item, index) in footerData" :href="footer_item.link" :key="index" target="_blank">
+                    <div class="footer_icon-wrapper footer_bg-white" :title="footer_item.title">
+                        <img class="footer_icon" :src="footer_item.url" />
+                    </div>
                 </a>
             </div>
-            <div class="Footer_copyright">© 2021. Ha Hyun Joon. All rights reserved.</div>
+            <div class="footer_copyright">© 2021. Ha Hyun Joon. All rights reserved.</div>
         </footer>
     </div>
 </template>
@@ -20,7 +16,25 @@
 export default {
     name: "Footer",
     data() {
-        return {};
+        return {
+            footerData: [
+                {
+                    link: "https://github.com/haryan248",
+                    title: "GitHub",
+                    url: require("@/assets/images/footer/github.png"),
+                },
+                {
+                    link: "https://www.instagram.com/h__.__joon/",
+                    title: "Instagram",
+                    url: require("@/assets/images/footer/instagram.png"),
+                },
+                {
+                    link: "mailto:haryan96@gmail.com",
+                    title: "Mail",
+                    url: require("@/assets/images/footer/email.png"),
+                },
+            ],
+        };
     },
 };
 </script>
