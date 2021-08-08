@@ -1,6 +1,6 @@
 <template>
     <div>
-        <header class="section_header" :class="{ header_background: checkHeight }">
+        <header class="section_header" :class="[{ header_background: checkHeight || checkWidth }]">
             <div class="header_content">
                 <div class="header_title">Hyun Joon</div>
                 <div class="header_navigation-menus">
@@ -17,6 +17,7 @@ export default {
     name: "Header",
     props: {
         scrollHeight: Number,
+        bodyWidth: Number,
     },
     data() {
         return {
@@ -26,6 +27,8 @@ export default {
                 { id: 3, name: "Projects" },
                 { id: 4, name: "Career" },
             ],
+            headerElement: document.getElementsByClassName("section_header"),
+            aboutElement: document.getElementsByClassName("section_myinfo"),
             showHeader: false,
             aboutLocation: 0,
             skillLocation: 0,
@@ -35,15 +38,16 @@ export default {
     },
     computed: {
         checkHeight() {
-            if (
-                this.scrollHeight &&
-                document.getElementsByClassName("section_myinfo")[0] &&
-                this.scrollHeight + document.getElementsByClassName("section_header")[0].offsetHeight >= document.getElementsByClassName("section_myinfo")[0].offsetTop
-            ) {
+            if (this.scrollHeight + this.headerElement[0]?.offsetHeight >= this.aboutElement[0]?.offsetTop) {
                 return true;
             } else {
                 return false;
             }
+        },
+        checkWidth() {
+            if (this.bodyWidth < 767) {
+                return true;
+            } else return false;
         },
     },
     mounted() {
@@ -57,7 +61,6 @@ export default {
             this.projectLocation = document.querySelector(".section_project").offsetTop;
             this.careerLocation = document.querySelector(".section_career").offsetTop;
         },
-        handleScroll() {},
         moveTotab(id) {
             if (id === 1) {
                 window.scrollTo({ top: this.aboutLocation, behavior: "smooth" });

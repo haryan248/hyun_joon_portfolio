@@ -1,6 +1,6 @@
 <template>
-    <div id="app">
-        <Header :scrollHeight="scrollHeight" />
+    <div ref="app" id="app">
+        <Header :scrollHeight="scrollHeight" :bodyWidth="bodyWidth" />
         <Maincontent :scrollHeight="scrollHeight" />
         <Footer />
     </div>
@@ -15,17 +15,22 @@ export default {
     name: "App",
     components: { Header, Footer, Maincontent },
     data() {
-        return { scrollHeight: 0 };
+        return { scrollHeight: 0, bodyWidth: 0 };
     },
     mounted() {
         window.addEventListener("scroll", this.handleScroll);
+        window.addEventListener("resize", this.handleResize);
     },
-    destroyed() {
-        window.removeEventListener("scroll");
+    beforeDestroy() {
+        window.removeEventListener("scroll", this.handleScroll);
+        window.removeEventListener("resize", this.handleResize);
     },
     methods: {
         handleScroll() {
             this.scrollHeight = window.scrollY;
+        },
+        handleResize() {
+            this.bodyWidth = window.innerWidth;
         },
     },
 };
