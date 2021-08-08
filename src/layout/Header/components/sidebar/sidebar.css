@@ -1,0 +1,84 @@
+/* sidebar css */
+.modal_overlay {
+    height: 100vh;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 53;
+    background: rgba(0, 0, 0, 0.4);
+    overscroll-behavior: none;
+}
+.dialog {
+    position: absolute;
+    top: 0px;
+    width: 300px;
+    height: 100%;
+    max-height: 100%;
+    border-radius: 0px;
+    background: rgb(255, 255, 255);
+    right: 0px;
+}
+.modal_overlay.v-enter,
+.modal_overlay.v-leave-to {
+    opacity: 0;
+}
+.modal_overlay.v-enter-active {
+    transition: all 0.4s;
+}
+.modal_overlay.v-leave-active {
+    transition: all 0.3s;
+}
+.modal_overlay.v-enter .dialog,
+.modal_overlay.v-leave-to .dialog {
+    transform: translate3d(100%, 0, 0);
+}
+.modal_overlay.v-enter-active .dialog {
+    transition: transform 0.3s;
+}
+.modal_overlay.v-leave-active .dialog {
+    transition: transform 0.5s;
+}
+.side_bar-wrapper .side_bar-close {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 35px;
+    right: 10px;
+}
+.side_bar-wrapper .side_bar-menus {
+    width: 100%;
+    padding: 70px 0 16px;
+    box-sizing: border-box;
+}
+.side_bar-menus .menu_title {
+    width: 100%;
+    padding: 0 30px 24px;
+    box-sizing: border-box;
+    color: #333;
+    font-size: 20px;
+    line-height: 1;
+    font-family: AppleSDGothicNeoEB00;
+}
+.side_bar-wrapper .side_bar-menus .side_bar-menu {
+    width: 100%;
+    padding: 0 30px;
+    box-sizing: border-box;
+    border-bottom-color: #cccccc;
+    border-bottom-width: 7px;
+    border-bottom-style: solid;
+    border-image: linear-gradient(90deg, #78ace4, #6f41b6);
+    border-image-slice: 1;
+}
+.header_navigation-mobile-menu {
+    display: flex;
+    padding: 0 1rem;
+    font-family: AppleSDGothicNeoM00;
+    font-size: 1.2rem;
+    color: black;
+    line-height: 2rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
