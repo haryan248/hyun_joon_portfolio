@@ -23,16 +23,6 @@
     height: max-content;
     text-align: center;
 }
-.myinfo_section_title_wrap .section_title {
-    color: #ffffff;
-    border-bottom-width: 9px;
-    border-bottom-style: solid;
-    border-image: linear-gradient(90deg, #78ace4, #6f41b6);
-    border-image-slice: 1;
-    font-family: AppleSDGothicNeoEB00;
-    font-size: 3rem;
-    line-height: 1.5;
-}
 .myinfo_container {
     display: flex;
     justify-content: center;

@@ -2,7 +2,7 @@
     <div class="section_myinfo">
         <div class="myinfo_content" :class="computedClass">
             <div class="myinfo_section_title_wrap">
-                <span class="section_title">ABOUT ME</span>
+                <span class="section_title border_bottom">ABOUT ME</span>
             </div>
         </div>
         <!-- profile -->

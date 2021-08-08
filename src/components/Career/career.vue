@@ -2,7 +2,7 @@
     <div class="section_career">
         <div class="career_content">
             <div class="career_section_title_wrap">
-                <span class="section_title">CAREER</span>
+                <span class="section_title border_bottom">CAREER</span>
             </div>
             <CareerList v-for="(careers, index) in careers" :key="index" :careers="careers" />
         </div>

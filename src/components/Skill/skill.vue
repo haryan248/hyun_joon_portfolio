@@ -2,11 +2,11 @@
     <section class="section_skill">
         <div class="skill_content" :class="computedClass">
             <div class="skill_section_title_wrap">
-                <span class="section_title">SKILLS</span>
+                <span class="section_title border_bottom">SKILLS</span>
             </div>
         </div>
         <div class="skill_container" :class="[{ 'stagger-item': checkHeight }, { 'stagger-item-out': !checkHeight }]" v-for="(skill, index) in skills" :key="index">
-            <div class="status_title">{{ index }}</div>
+            <div class="status_title ">{{ index }}</div>
             <div class="status_content" v-for="skill_item in skill" :key="skill_item.label">
                 <div class="status_bar-title">{{ skill_item.label }}</div>
                 <div class="status_bar-item">

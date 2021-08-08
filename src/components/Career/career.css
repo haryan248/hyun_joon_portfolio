@@ -17,15 +17,6 @@
     height: max-content;
     text-align: center;
 }
-.career_section_title_wrap .section_title {
-    border-bottom-width: 9px;
-    border-bottom-style: solid;
-    border-image: linear-gradient(90deg, #78ace4, #6f41b6);
-    border-image-slice: 1;
-    font-family: AppleSDGothicNeoEB00;
-    font-size: 3rem;
-    line-height: 1.5;
-}
 @media all and (max-width: 767px) {
     .career_section_title_wrap .section_title {
         font-size: 2rem;

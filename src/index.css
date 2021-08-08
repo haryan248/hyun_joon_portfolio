@@ -65,3 +65,16 @@ body {
 .info_opacity_zero {
     opacity: 0;
 }
+
+.section_title {
+    box-sizing: border-box;
+    border-style: solid;
+    border-image: linear-gradient(90deg, #78ace4, #6f41b6);
+    border-image-slice: 1;
+    font-family: AppleSDGothicNeoEB00;
+    font-size: 3rem;
+    line-height: 1.5;
+}
+.border_bottom {
+    border-image-width: 0 0 9px 0;
+}
