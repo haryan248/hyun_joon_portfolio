@@ -53,9 +53,7 @@ export default {
             } else return false;
         },
     },
-    mounted() {
-        this.setLocation();
-    },
+    mounted() {},
     methods: {
         setLocation() {
             this.aboutLocation = document.querySelector(".section_myinfo").offsetTop - this.headerElement[0].offsetHeight;
@@ -64,14 +62,16 @@ export default {
             this.careerLocation = document.querySelector(".section_career").offsetTop - this.headerElement[0].offsetHeight;
         },
         moveTotab(id, sidebarStatus) {
+            this.setLocation();
+
             if (id === 1) {
-                window.scrollTo({ top: document.querySelector(".section_myinfo").offsetTop - this.headerElement[0].offsetHeight, behavior: "smooth" });
+                window.scrollTo({ top: this.aboutLocation, behavior: "smooth" });
             } else if (id === 2) {
-                window.scrollTo({ top: document.querySelector(".section_skill").offsetTop - this.headerElement[0].offsetHeight, behavior: "smooth" });
+                window.scrollTo({ top: this.skillLocation, behavior: "smooth" });
             } else if (id === 3) {
-                window.scrollTo({ top: document.querySelector(".section_project").offsetTop - this.headerElement[0].offsetHeight, behavior: "smooth" });
+                window.scrollTo({ top: this.projectLocation, behavior: "smooth" });
             } else if (id === 4) {
-                window.scrollTo({ top: document.querySelector(".section_career").offsetTop - this.headerElement[0].offsetHeight, behavior: "smooth" });
+                window.scrollTo({ top: this.careerLocation, behavior: "smooth" });
             }
             if (sidebarStatus) this.$refs.sidebar.toggleSidebar();
         },
