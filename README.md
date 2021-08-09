@@ -1,24 +1,21 @@
 # hyun_joon_portfolio
 
-## Project setup
+
 ```
-yarn install
+안녕하세요.
+신입 front-end developer입니다.
 ```
 
-### Compiles and hot-reloads for development
+### 사용한 플러그인
 ```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
+- vue 2.6.11
+- swiper 5.3.7
+- vue-awesome-swiper 4.1.1
+- prettier
 ```
 
-### Lints and fixes files
+### portfolio site (v1.0.3)
 ```
-yarn lint
+ https://haryan248.github.io/hyun_joon_portfolio/
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
