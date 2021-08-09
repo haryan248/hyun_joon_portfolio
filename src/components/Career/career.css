@@ -1,5 +1,6 @@
 .section_career {
     color: #fff;
+    margin-bottom: 5rem;
 }
 .career_content {
     box-sizing: border-box;
@@ -12,13 +13,19 @@
     box-sizing: initial;
     display: flex;
     justify-content: center;
-    padding: 1rem 0;
+    padding: 1rem 0 9rem 0;
     width: 100%;
     height: max-content;
     text-align: center;
 }
 @media all and (max-width: 767px) {
+    .section_career {
+        margin-bottom: 5rem;
+    }
     .career_content {
         padding: 2rem 2rem;
+    }
+    .career_section_title_wrap {
+        padding: 1rem 0 3rem 0;
     }
 }

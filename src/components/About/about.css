@@ -61,9 +61,7 @@
     font-size: 1.2em;
     font-family: AppleSDGothicNeoR00;
 }
-.highlight {
-    color: #78ace4;
-}
+
 .myinfo_profile-infos {
     display: flex;
     flex-flow: row wrap;

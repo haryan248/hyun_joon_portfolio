@@ -1,6 +1,7 @@
 .career_companies {
     width: 90%;
     margin: 0 auto;
+    margin-bottom: 2rem;
 }
 .career_company {
     display: flex;
@@ -38,11 +39,15 @@
 }
 .career_description {
     padding-bottom: 1rem;
-    border-bottom: 1px solid #fff;
+    border-style: solid;
+    border-image: linear-gradient(90deg, #78ace4, #6f41b6);
+    border-image-slice: 1;
+    border-image-width: 0 0 2px 0;
 }
 .career_works {
     padding-left: 1rem;
     margin: 1rem 0;
+    list-style: none;
 }
 .career_works-title {
     margin: 2rem 0 1rem -1rem;
@@ -54,9 +59,19 @@
 }
 .career_works-item {
     font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+ul.career_works li:before {
+    content: "-";
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0px 5px 0px 0px;
 }
 
 @media all and (max-width: 767px) {
+    .career_companies {
+        margin-bottom: 4rem;
+    }
     .career_company {
         flex-direction: column;
     }

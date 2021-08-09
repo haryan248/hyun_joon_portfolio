@@ -74,7 +74,12 @@ body {
 .border_bottom {
     border-image-width: 0 0 7px 0;
 }
-
+.text_focus {
+    color: #b49dd8;
+}
+.highlight {
+    color: #78ace4;
+}
 @media all and (max-width: 767px) {
     .section_title {
         font-size: 1.8rem;
