@@ -1,14 +1,16 @@
 <template>
     <div>
-        <footer class="footer_footer">
-            <div class="footer_icons">
-                <a v-for="(footer_item, index) in footerData" :href="footer_item.link" :key="index" target="_blank">
-                    <div class="footer_icon-wrapper footer_bg-white" :title="footer_item.title">
-                        <img class="footer_icon" :src="footer_item.url" />
-                    </div>
-                </a>
+        <footer class="footer_footer blur">
+            <div class="footer_wrapper">
+                <div class="footer_icons">
+                    <a v-for="(footer_item, index) in footerData" :href="footer_item.link" :key="index" target="_blank">
+                        <div class="footer_icon-wrapper footer_bg-white" :title="footer_item.title">
+                            <img class="footer_icon" :src="footer_item.url" />
+                        </div>
+                    </a>
+                </div>
+                <div class="footer_copyright">© 2021. Ha Hyun Joon. All rights reserved.</div>
             </div>
-            <div class="footer_copyright">© 2021. Ha Hyun Joon. All rights reserved.</div>
         </footer>
     </div>
 </template>
