@@ -14,8 +14,9 @@
 - prettier
 ```
 
-### portfolio site (v1.0.3)
+### portfolio site (demo)
 ```
- https://haryan248.github.io/hyun_joon_portfolio/
+ [HJ portfolio v1.0.3](https://haryan248.github.io/hyun_joon_portfolio/) 
+
 ```
 
