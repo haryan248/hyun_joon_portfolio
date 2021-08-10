@@ -58,6 +58,16 @@
         color: white;
     }
 }
+@keyframes status-graph-30 {
+    0% {
+        width: 0;
+        color: rgb(255, 255, 255, 0);
+    }
+    100% {
+        width: 30%;
+        color: white;
+    }
+}
 @keyframes status-graph-20 {
     0% {
         width: 0;
@@ -129,6 +139,16 @@
         color: rgb(255, 255, 255, 0);
     }
 }
+@keyframes status-graph-30-out {
+    0% {
+        width: 30%;
+        color: white;
+    }
+    100% {
+        width: 0;
+        color: rgb(255, 255, 255, 0);
+    }
+}
 @keyframes status-graph-20-out {
     0% {
         width: 20%;
@@ -137,6 +157,28 @@
     100% {
         width: 0;
         color: rgb(255, 255, 255, 0);
+    }
+}
+@keyframes borealisBar {
+    0% {
+        left: 0%;
+        right: 100%;
+        width: 0%;
+    }
+    10% {
+        left: 0%;
+        right: 75%;
+        width: 25%;
+    }
+    90% {
+        right: 0%;
+        left: 75%;
+        width: 25%;
+    }
+    100% {
+        left: 100%;
+        right: 0%;
+        width: 0%;
     }
 }
 .section_skill {
@@ -166,6 +208,103 @@
     width: 100%;
     height: max-content;
     text-align: center;
+}
+
+.skill_info_container {
+    font-size: 0.85rem;
+    font-family: AppleSDGothicNeoSB00;
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+    flex-direction: column;
+    width: 60%;
+}
+.skill_info_wrapper {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: left;
+}
+.skill_info {
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+}
+.skill_info p {
+    position: relative;
+    display: inline-block;
+    margin: 0 0.5rem;
+    transition: all 0.5s;
+}
+.skill_info_content .skill_tooltip {
+    text-align: left;
+    color: black;
+    position: absolute;
+    font-family: AppleSDGothicNeoEB00;
+    bottom: 0;
+    left: -25px;
+    right: -25px;
+    padding: 5px 7px;
+    font-size: 0.7rem;
+    border-radius: 7px;
+    background: rgba(255, 255, 255, 0.918);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.skill_info p .skill_tooltip:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid rgba(255, 255, 255, 0.918);
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+}
+.skill_info:hover .skill_tooltip {
+    bottom: 50px;
+    visibility: visible;
+    opacity: 1;
+}
+.skill_info_content {
+    line-height: 1.1;
+    white-space: pre-wrap;
+    margin: 0 auto;
+}
+.skill_info_desc1 {
+    font-size: 0.7rem;
+}
+.loader {
+    width: 140px;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 3px solid transparent;
+    position: relative;
+    padding: 1px;
+}
+.loader:before {
+    content: "";
+    border: 1px solid #222222;
+    border-radius: 3px;
+    background: linear-gradient(90deg, #78ace4, #6f41b6);
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+}
+.loader .loaderBar {
+    position: absolute;
+    border-radius: 3px;
+    top: 0;
+    right: 100%;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    background: #9999991f;
+    animation: borealisBar 2s linear infinite;
 }
 .skill_container {
     justify-content: center;
@@ -242,6 +381,11 @@
     opacity: 1;
     animation: status-graph-50 1;
 }
+.percent_animation-30 {
+    width: 30%;
+    opacity: 1;
+    animation: status-graph-30 1;
+}
 .percent_animation-20 {
     width: 20%;
     opacity: 1;
@@ -277,8 +421,15 @@
 }
 
 @media all and (max-width: 767px) {
+    .skill_info_container,
     .skill_container {
         width: 80%;
+    }
+    .skill_info_container {
+        font-size: 0.6rem;
+    }
+    .loader {
+        width: 110px;
     }
     .status_title {
         font-size: 1rem;
@@ -286,7 +437,9 @@
     .status_bar-title {
         font-size: 0.3rem;
     }
-
+    .skill_info_content .skill_tooltip {
+        font-size: 0.5rem;
+    }
     .status_bar-percent {
         height: 17px;
         line-height: 18.5px;
