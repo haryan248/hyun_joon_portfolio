@@ -46,17 +46,17 @@ export default {
                 {
                     link: "https://github.com/haryan248",
                     title: "GitHub",
-                    url: require("@/assets/images/footer/github.png"),
+                    url: require("@/assets/images/header/github.png"),
                 },
                 {
                     link: "https://www.instagram.com/h__.__joon/",
                     title: "Instagram",
-                    url: require("@/assets/images/footer/instagram.png"),
+                    url: require("@/assets/images/header/instagram.png"),
                 },
                 {
                     link: "mailto:haryan96@gmail.com",
                     title: "Mail",
-                    url: require("@/assets/images/footer/email.png"),
+                    url: require("@/assets/images/header/email.png"),
                 },
             ],
         };
