@@ -28,6 +28,7 @@ export default {
                     { index: 3, style: "" },
                     { index: 4, style: "" },
                     { index: 5, style: "" },
+                    { index: 6, style: "" },
                 ],
 
                 pill: [
@@ -35,6 +36,8 @@ export default {
                     { index: 2, style: "" },
                     { index: 3, style: "" },
                     { index: 4, style: "" },
+                    { index: 5, style: "" },
+                    { index: 6, style: "" },
                 ],
             },
         };

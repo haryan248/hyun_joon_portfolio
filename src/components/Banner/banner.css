@@ -168,6 +168,12 @@
     background-color: transparent;
     border: 3px solid white;
 }
+.circle_6 {
+    width: 120px;
+    height: 120px;
+    bottom: 372px;
+    left: -985px;
+}
 .pill {
     opacity: 0.5;
     background-color: white;
@@ -203,7 +209,20 @@
     left: 276px;
     animation: pillAnimationTop;
 }
-
+.pill_5 {
+    width: 43px;
+    height: 83px;
+    bottom: -200px;
+    left: -298px;
+    animation: pillAnimationBottom;
+}
+.pill_6 {
+    width: 67px;
+    height: 125px;
+    bottom: -299px;
+    left: -298px;
+    animation: pillAnimationBottom;
+}
 @media all and (max-width: 767px) {
     .section_banner .banner_title {
         font-size: 2.2rem;
