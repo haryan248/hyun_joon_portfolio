@@ -43,6 +43,17 @@
         transform: translateY(100px);
     }
 }
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 body {
     box-sizing: border-box;
     margin: 0;
@@ -79,6 +90,11 @@ body {
 }
 .highlight {
     color: #78ace4;
+}
+.move_background {
+    background: linear-gradient(65deg, #2a153d, #6f41b6, #4e95e2, #18d3a7);
+    background-size: 400% 400%;
+    animation: backgroundAnimation 8s ease infinite;
 }
 @media all and (max-width: 767px) {
     .section_title {
