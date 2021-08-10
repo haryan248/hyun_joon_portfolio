@@ -33,10 +33,9 @@ export default {
             ],
             headerElement: document.getElementsByClassName("section_header"),
             aboutElement: document.getElementsByClassName("section_myinfo"),
-            aboutLocation: 0,
-            skillLocation: 0,
-            projectLocation: 0,
-            careerLocation: 0,
+            skillElement: document.querySelector(".section_skill"),
+            projectElement: document.querySelector(".section_project"),
+            careerElement: document.querySelector(".section_career"),
         };
     },
     computed: {
@@ -55,25 +54,20 @@ export default {
     },
     mounted() {},
     methods: {
-        setLocation() {
-            this.aboutLocation = document.querySelector(".section_myinfo").offsetTop - this.headerElement[0].offsetHeight;
-            this.skillLocation = document.querySelector(".section_skill").offsetTop - this.headerElement[0].offsetHeight;
-            this.projectLocation = document.querySelector(".section_project").offsetTop - this.headerElement[0].offsetHeight;
-            this.careerLocation = document.querySelector(".section_career").offsetTop - this.headerElement[0].offsetHeight;
+        setLocation(id) {
+            if (id === 1) {
+                return this.aboutElement.offsetTop - this.headerElement[0].offsetHeight;
+            } else if (id === 2) {
+                return this.skillElement.offsetTop - this.headerElement[0].offsetHeight;
+            } else if (id === 3) {
+                return this.projectElement.offsetTop - this.headerElement[0].offsetHeight;
+            } else if (id === 4) {
+                return this.careerElement.offsetTop - this.headerElement[0].offsetHeight;
+            }
         },
         moveTotab(id, sidebarStatus) {
-            this.setLocation();
-
-            if (id === 1) {
-                window.scrollTo({ top: this.aboutLocation, behavior: "smooth" });
-            } else if (id === 2) {
-                window.scrollTo({ top: this.skillLocation, behavior: "smooth" });
-            } else if (id === 3) {
-                window.scrollTo({ top: this.projectLocation, behavior: "smooth" });
-            } else if (id === 4) {
-                window.scrollTo({ top: this.careerLocation, behavior: "smooth" });
-            }
             if (sidebarStatus) this.$refs.sidebar.toggleSidebar();
+            window.scrollTo({ top: this.setLocation(id), behavior: "smooth" });
         },
     },
 };
