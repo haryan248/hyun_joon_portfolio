@@ -33,9 +33,6 @@ export default {
             ],
             headerElement: document.getElementsByClassName("section_header"),
             aboutElement: document.getElementsByClassName("section_myinfo"),
-            skillElement: document.querySelector(".section_skill"),
-            projectElement: document.querySelector(".section_project"),
-            careerElement: document.querySelector(".section_career"),
         };
     },
     computed: {
@@ -51,13 +48,13 @@ export default {
     methods: {
         setLocation(id) {
             if (id === 1) {
-                return this.aboutElement.offsetTop - this.headerElement[0].offsetHeight;
+                return document.querySelector(".section_myinfo").offsetTop - this.headerElement[0].offsetHeight;
             } else if (id === 2) {
-                return this.skillElement.offsetTop - this.headerElement[0].offsetHeight;
+                return document.querySelector(".section_skill").offsetTop - this.headerElement[0].offsetHeight;
             } else if (id === 3) {
-                return this.projectElement.offsetTop - this.headerElement[0].offsetHeight;
+                return document.querySelector(".section_project").offsetTop - this.headerElement[0].offsetHeight;
             } else if (id === 4) {
-                return this.careerElement.offsetTop - this.headerElement[0].offsetHeight;
+                return document.querySelector(".section_career").offsetTop - this.headerElement[0].offsetHeight;
             }
         },
         moveTotab(id, sidebarStatus) {
