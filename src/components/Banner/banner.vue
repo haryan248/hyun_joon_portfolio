@@ -6,7 +6,7 @@
                 <div class="banner_animaiton-right">HYUNJOON'S PORTFOLIO</div>
             </div>
             <div class="banner_more-button" @click="clickMoreButton"></div>
-            <div class="bannerDesign_wrapper">
+            <div v-if="!checkWidth" class="bannerDesign_wrapper">
                 <div v-for="(designElements, key) in designItem" :key="key">
                     <div v-for="(designElement, index) in designElements" :key="`${key}-${index}`">
                         <div :class="`${key} ${key}_${designElement.index}`" :style="designElement.style"></div>
@@ -19,6 +19,9 @@
 <script>
 export default {
     name: "Banner",
+    props: {
+        checkWidth: Boolean,
+    },
     data() {
         return {
             designItem: {

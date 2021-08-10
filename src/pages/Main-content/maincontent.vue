@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- banner -->
-        <Banner :scrollHeight="scrollHeight" />
+        <Banner :scrollHeight="scrollHeight" :checkWidth="checkWidth" />
         <!-- about me -->
         <About :scrollHeight="scrollHeight" />
         <!-- skill -->
@@ -23,7 +23,7 @@ import Career from "../../components/Career/career.vue";
 export default {
     name: "Maincontent",
     components: { Projects, About, Career, Banner, Skill },
-    props: { scrollHeight: Number },
+    props: { scrollHeight: Number, checkWidth: Boolean },
     data() {
         return {};
     },

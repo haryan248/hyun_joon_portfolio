@@ -20,7 +20,7 @@ export default {
     name: "Header",
     props: {
         scrollHeight: Number,
-        bodyWidth: Number,
+        checkWidth: Boolean,
     },
     components: { Sidebar },
     data() {
@@ -45,11 +45,6 @@ export default {
             } else {
                 return false;
             }
-        },
-        checkWidth() {
-            if (this.bodyWidth < 767) {
-                return true;
-            } else return false;
         },
     },
     mounted() {},
