@@ -242,10 +242,11 @@
     position: absolute;
     font-family: AppleSDGothicNeoEB00;
     bottom: 0;
-    left: -25px;
-    right: -25px;
+    left: -45px;
+    right: -45px;
+    width: 250px;
     padding: 5px 7px;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     border-radius: 7px;
     background: rgba(255, 255, 255, 0.918);
     visibility: hidden;
@@ -439,6 +440,7 @@
     }
     .skill_info_content .skill_tooltip {
         font-size: 0.5rem;
+        width: 190px;
     }
     .status_bar-percent {
         height: 17px;
