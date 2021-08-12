@@ -13,13 +13,18 @@
                 <div class="footer_copyright">© 2021. Ha Hyun Joon. All rights reserved.</div>
             </div>
         </footer>
+        <div @click="scrollToTop" class="scrollTo_top" :class="({ 'scroll_animation-in': scrollHeight !== 0 }, { 'scroll_animation-out': scrollHeight === 0 })">
+            <img class="scrollTo_icon" :src="scrollUrl" />
+        </div>
     </div>
 </template>
 <script>
 export default {
     name: "Footer",
+    props: { scrollHeight: Number },
     data() {
         return {
+            scrollUrl: require("@/assets/images/footer/up-arrow.png"),
             footerData: [
                 {
                     link: "https://github.com/haryan248",
@@ -38,6 +43,11 @@ export default {
                 },
             ],
         };
+    },
+    methods: {
+        scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        },
     },
 };
 </script>

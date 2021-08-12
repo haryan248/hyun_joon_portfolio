@@ -2,7 +2,7 @@
     <div ref="app" id="app">
         <Header :scrollHeight="scrollHeight" :checkWidth="checkWidth" />
         <Maincontent :scrollHeight="scrollHeight" :checkWidth="checkWidth" />
-        <Footer />
+        <Footer :scrollHeight="scrollHeight" />
     </div>
 </template>
 
