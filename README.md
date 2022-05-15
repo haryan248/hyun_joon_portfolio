@@ -28,3 +28,4 @@
 - 커리어 업데이트
 - css → sass 적용
 - 상태 관리 라이브러리 (vuex 적용)
+- typescript 점진적 적용
